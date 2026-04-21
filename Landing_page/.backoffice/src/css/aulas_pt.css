@@ -1,0 +1,107 @@
+/* Grid de aulas */
+#aulasPT .aulas-grid,
+#listaAulasPT.aulas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* até 3 cards por linha */
+    gap: 20px; /* espaçamento entre cards */
+}
+
+/* Ícones (Remix) */
+#listaAulasPT i {
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+/* card do PT (usa o tema do global: .pt-card) */
+#listaAulasPT .aula-card{
+  padding: 18px 18px !important; /* ligeiramente mais compacto que .pt-card default */
+  min-height: auto !important;
+}
+
+#listaAulasPT .aula-card h5{
+  color: var(--pt-text);
+  font-weight: 700;
+  font-size: 15px;
+  margin: 0 0 6px 0;
+}
+
+#listaAulasPT .aula-card small{
+  color: var(--pt-text-muted);
+}
+
+#listaAulasPT .aula-card .badge{
+  background: rgba(46,204,113,0.15);
+  color: var(--pt-success);
+  font-size: 11px;
+  border-radius: 999px;
+  padding: 6px 10px;
+}
+
+/* layout interno */
+#listaAulasPT .aula-card .aula-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+
+#listaAulasPT .aula-card .aula-actions{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ===== AULAS PT - layout do card ===== */
+
+#listaAulasPT .aula-card{
+  display: flex !important;
+  align-items: stretch !important;
+  min-height: 120px !important;
+  padding: 16px 18px !important;
+}
+
+#listaAulasPT .aula-row{
+  display: flex !important;
+  width: 100% !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 18px !important;
+}
+
+#listaAulasPT .aula-info{
+  flex: 1 1 auto !important;
+  min-width: 0 !important; /* evita overflow do título */
+}
+
+#listaAulasPT .aula-info h5{
+  margin: 0 0 6px 0 !important;
+  line-height: 1.2 !important;
+}
+
+#listaAulasPT .aula-info small{
+  display: block !important;
+  margin-bottom: 10px !important;
+  opacity: .8 !important;
+}
+
+#listaAulasPT .aula-actions{
+  flex: 0 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  align-items: flex-end !important;
+}
+
+#listaAulasPT .aula-actions .pt-btn,
+#listaAulasPT .aula-actions .pt-btn-outline{
+  width: 140px !important;   /* consistência */
+  justify-content: center !important;
+  white-space: nowrap !important;
+}
+
+/* badge mais “colado” à info, e sem saltar */
+#listaAulasPT .aula-card .badge{
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}

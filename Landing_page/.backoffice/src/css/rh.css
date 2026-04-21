@@ -1,0 +1,69 @@
+/* Labels (títulos) brancas dentro do modal */
+.modal-content .form-label {
+  color: #fff !important;
+}
+
+/* Inputs de texto dentro do modal */
+.modal-content .form-control {
+  color: #000 !important; /* texto digitado preto */
+  background-color: #fff !important; /* fundo branco */
+}
+
+.modal-content .form-control::placeholder {
+  color: #333 !important; /* placeholder visível */
+}
+
+/* Selects normais Bootstrap 5 (form-select) */
+.modal-content .form-select {
+  color: #000 !important; /* texto selecionado preto */
+  background-color: #fff !important; /* fundo branco */
+}
+
+/* Selects normais Bootstrap 4 (form-control) */
+.modal-content select.form-control,
+.modal-content select {
+  color: #000 !important;
+  background-color: #fff !important;
+}
+
+/* Opções dentro dos selects */
+.modal-content select option {
+  color: #000 !important;
+  background-color: #fff !important;
+}
+
+/* Select2 plugin (se estiveres a usar) */
+.modal-content .select2-container--default .select2-selection--single {
+  color: #000 !important;
+  background-color: #fff !important;
+}
+
+.modal-content .select2-container--default .select2-results__option {
+  color: #000 !important;
+  background-color: #fff !important;
+}
+
+/* ===== Corrigir campos do DataTables no modo escuro ===== */
+
+/* seletor "Show entries" */
+.dataTables_length select,
+.dataTables_length select option {
+  color: #fff !important;              /* texto branco */
+  background-color: #2c2c2c !important; /* fundo escuro */
+  border: 1px solid #444 !important;
+}
+
+/* campo "Search" */
+.dataTables_filter input[type="search"] {
+  color: #fff !important;               /* texto branco */
+  background-color: #2c2c2c !important; /* fundo escuro */
+  border: 1px solid #444 !important;
+}
+
+/* placeholder também branco/cinzento */
+.dataTables_filter input[type="search"]::placeholder {
+  color: #ccc !important;
+  opacity: 1;
+}
+
+

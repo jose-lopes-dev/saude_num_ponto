@@ -1,0 +1,23 @@
+/* Apenas estilos específicos do gráfico e select */
+#custos_donut_chart {
+    height: 350px; /* altura do gráfico */
+}
+
+#mesSelect {
+    cursor: pointer;
+}
+
+.scroll-max-320 {
+  max-height: 320px;
+}
+.scroll-max-300 {
+  max-height: 300px;
+}
+.icon-100 {
+  width: 100px;
+  height: 100px;
+}
+.chart-350 {
+  height: 350px;
+}
+

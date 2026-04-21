@@ -1,0 +1,388 @@
+.pt-list-row{
+  border: 1px solid rgba(255,255,255,.10)!important;
+  background: rgba(0,0,0,.10)!important;
+  border-radius: 12px !important;
+  padding: 12px 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.pt-list-row .meta{
+  color: rgba(255,255,255,.65) !important;
+  font-size: .82rem !important;
+}
+
+#listaPlanosCliente .list-group,
+#listaFicheirosPT .list-group,
+#listaPlanosPT .list-group{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Linha do item com “cara do site” */
+#listaPlanosCliente .list-group-item,
+#listaFicheirosPT .list-group-item,
+#listaPlanosPT .list-group-item{
+  border: 1px solid rgba(255,255,255,.10) !important;
+  background: rgba(0,0,0,.12) !important;
+  border-radius: 14px !important;
+
+  padding: 14px 16px !important;
+  margin: 0 !important;
+
+  transition: background .15s ease, border-color .15s ease;
+}
+
+/* Texto (título + meta) */
+#listaPlanosCliente .fw-semibold,
+#listaFicheirosPT .fw-semibold,
+#listaPlanosPT .fw-semibold{
+  font-weight: 800 !important;
+}
+
+#listaPlanosCliente small.text-muted,
+#listaFicheirosPT small.text-muted,
+#listaPlanosPT small.text-muted{
+  color: rgba(255,255,255,.65) !important;
+  font-size: .82rem !important;
+}
+
+/* Botões: juntos, consistentes, sem “espaço de aeroporto” */
+#listaPlanosCliente .list-group-item > .d-flex.gap-2,
+#listaPlanosCliente .list-group-item > .d-flex{
+  gap: 8px !important;
+}
+
+#listaPlanosCliente .btn,
+#listaFicheirosPT .btn,
+#listaPlanosPT .btn{
+  padding: 6px 10px !important;
+  border-radius: 10px !important;
+  font-weight: 800 !important;
+  min-width: 58px;
+}
+
+/* Estado "Nenhum ..." com cara de componente */
+#listaPlanosCliente > p.text-muted,
+#listaFicheirosPT > p.text-muted,
+#listaPlanosPT > p.text-muted{
+  border: 1px dashed rgba(255,255,255,.18);
+  background: rgba(255,255,255,.03);
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin: 0;
+  min-height: 70px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================= */
+/*  PT Action Buttons (Global)   */
+/* ============================= */
+
+.pt-action-btn{
+  width: 42px;
+  height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+  background: transparent !important;
+
+  border: 1.5px solid rgba(255,255,255,.18);
+  color: #FBFBFA !important;
+
+  transition: all .15s ease;
+}
+
+.pt-action-btn i{
+  font-size: 1.05rem;
+}
+
+/* Hover glow */
+.pt-action-btn:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 3px rgba(255,255,255,.04);
+}
+
+/* GREEN (Ver / Confirmar) */
+.pt-action-btn--green{
+  border-color: rgba(40,200,120,.85);
+  color: rgba(40,200,120,.95) !important;
+}
+.pt-action-btn--green:hover{
+  background: rgba(40,200,120,.10) !important;
+}
+
+/* RED (Remover / Cancelar) */
+.pt-action-btn--red{
+  border-color: rgba(255,60,60,.85);
+  color: rgba(255,60,60,.95) !important;
+}
+.pt-action-btn--red:hover{
+  background: rgba(255,60,60,.10) !important;
+}
+
+/* YELLOW (Editar) */
+.pt-action-btn--yellow{
+  border-color: rgba(255,200,60,.85);
+  color: rgba(255,200,60,.95) !important;
+}
+.pt-action-btn--yellow:hover{
+  background: rgba(255,200,60,.10) !important;
+}
+
+/* ===== Modal Detalhes do Plano (só este modal) ===== */
+
+#modalPlano .modal-content{
+  border-radius: 18px !important;
+  border: 1px solid rgba(255,255,255,.12) !important;
+  background: rgba(18,19,19,.96) !important;
+}
+
+#modalPlano .modal-header,
+#modalPlano .modal-footer{
+  border-color: rgba(255,255,255,.08) !important;
+}
+
+#modalPlano .modal-title{
+  font-weight: 900 !important;
+  letter-spacing: .2px;
+}
+
+#modalPlano .modal-body{
+  padding: 16px 18px !important;
+}
+
+/* Linha do título (Título: full) */
+#modalPlano .modal-body > p{
+  margin: 0 0 10px 0 !important;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.12);
+}
+
+#modalPlano .modal-body hr{
+  border-color: rgba(255,255,255,.08) !important;
+  margin: 12px 0 10px !important;
+}
+
+/* Dia (Segunda/Quinta...) */
+#modalPlano #mCorpo h6{
+  margin: 14px 0 10px !important;
+  padding: 8px 12px !important;
+
+  border-left: 4px solid rgba(170,202,28,.75);
+  background: rgba(170,202,28,.08);
+
+  border-radius: 12px;
+  font-weight: 900 !important;
+}
+
+/* Lista de exercícios */
+#modalPlano #mCorpo .list-group{
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Item exercício */
+#modalPlano #mCorpo .list-group-item{
+  border: 1px solid rgba(255,255,255,.10) !important;
+  background: rgba(0,0,0,.14) !important;
+  border-radius: 14px !important;
+
+  padding: 12px 14px !important;
+  margin: 0 !important;
+}
+
+#modalPlano #mCorpo .list-group-item:hover{
+  border-color: rgba(255,255,255,.16) !important;
+  background: rgba(255,255,255,.02) !important;
+}
+
+
+/* Nome do exercício */
+#modalPlano #mCorpo .list-group-item .fw-semibold{
+  font-weight: 900 !important;
+  margin-bottom: 6px;
+}
+
+/* Meta (séries/reps/descanso + extras) */
+#modalPlano #mCorpo .list-group-item small.text-muted{
+  display: block;
+  color: rgba(255,255,255,.68) !important;
+  font-size: .86rem !important;
+  line-height: 1.25rem;
+}
+
+/* Observações (o segundo small depois do <br>) */
+#modalPlano #mCorpo .list-group-item small.text-muted small.text-muted{
+  color: rgba(255,255,255,.55) !important;
+  font-size: .82rem !important;
+}
+
+.row-bottom {
+  display: flex !important;
+  justify-content: center !important; /* não space-between */
+  align-items: center !important;
+  gap: 10px !important;
+  width: 100% !important;
+}
+
+.pt-sum-list{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  margin-top: 10px;
+}
+
+.pt-sum-row{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+
+  padding: 10px 12px;
+  border-radius: 14px;
+
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.12);
+}
+
+.pt-sum-row:hover{
+  border-color: rgba(255,255,255,.16);
+  background: rgba(255,255,255,.02);
+}
+
+.pt-sum-main{
+  min-width: 0;
+}
+
+.pt-sum-title{
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.pt-sum-meta{
+  color: rgba(255,255,255,.65);
+  font-size: .85rem;
+}
+
+.pt-sum-del{
+  margin-left: auto;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+}
+
+.pt-sum-del{
+  margin-left: auto;
+}
+
+#bodyMap{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;           
+  margin-top: 15px;
+}
+
+#bodyMap svg{
+  width: 235px;         
+  height: auto;
+  display: block;
+  filter: saturate(1.45) brightness(0.78) contrast(1.18);
+}
+
+#bodyMap [data-grupo]{
+  cursor: pointer;
+  transition: filter .15s ease;
+}
+
+#bodyMap [data-grupo]:hover{
+  filter: drop-shadow(0 0 10px rgba(170,202,28,.75));
+}
+
+#bodyMap .ativo{
+  filter: drop-shadow(0 0 22px rgba(170,202,28,.9))
+          drop-shadow(0 0 10px rgba(255,255,255,.25));
+}
+
+#bodyMap .ativo path{
+  stroke: rgba(0,0,0,.75);
+  stroke-width: 5px;
+  paint-order: stroke fill;
+  
+}
+
+#diaResumo.is-empty{
+  overflow: hidden;      
+  padding-right: 0;       
+}
+
+#diaResumo.is-empty::after{
+  display: none;
+}
+
+.pt-form-card{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.pt-resumo-wrap{
+  flex: 1 1 auto;
+  min-height: 0;         
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pt-resumo-wrap h6{
+  flex: 0 0 auto;
+}
+
+#diaResumo{
+  flex: 1 1 auto;
+  max-height: 240px;           
+  overflow-y: auto;
+  padding-right: 6px;
+  scrollbar-gutter: stable;
+}
+
+#diaResumo.is-empty .pt-empty{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed rgba(255,255,255,.14);
+  background: rgba(255,255,255,.02);
+  border-radius: 14px;
+  color: rgba(255,255,255,.65);
+  font-weight: 700;
+}
+
+.btn-ghost-lime{
+  background: rgba(170, 202, 28, 0.08);
+  border: 1px solid rgba(170, 202, 28, 0.55);
+  color: #AACA1C;
+}
+
+.btn-ghost-lime:hover{
+  background: rgba(170, 202, 28, 0.14);
+  border-color: rgba(170, 202, 28, 0.75);
+  color: #AACA1C;
+}

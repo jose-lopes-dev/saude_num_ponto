@@ -1,0 +1,315 @@
+/* index.css
+   Ajustes para modais: fundo escuro, labels claras, inputs com fundo branco
+   Ligar este ficheiro depois dos CSS do tema para sobrescrever corretamente.
+*/
+
+/* Manter o comportamento que já tinhas */
+body.modal-open {
+  overflow: hidden !important;
+  width: 100%;
+  padding-right: 0 !important;
+}
+
+/* Centrar modal (mantém o teu comportamento) */
+.modal-dialog-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100% - 1rem);
+}
+
+/* Scroll interno em modais grandes (mantém o teu comportamento) */
+.modal-dialog-scrollable .modal-content {
+  max-height: 90vh;
+  overflow: auto;
+}
+
+/* ===========================
+   Aparência escura do modal
+   =========================== */
+
+/* Fundo do modal e texto padrão (escuro, labels claras) */
+.modal .modal-content {
+  background-color: #1f2326 !important; /* fundo escuro */
+  color: #e9ecef;                         /* texto claro */
+  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* Cabeçalho do modal (mantém contraste e X visível) */
+.modal .modal-header {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+/* Título */
+.modal .modal-title {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+/* Botão fechar - torna o ícone visível em fundo escuro */
+.modal .modal-header .btn-close {
+  filter: invert(1) grayscale(1) brightness(2);
+  opacity: 0.9;
+}
+
+/* Labels (a cor que queres ver) */
+.modal .form-label {
+  color: #e9ecef !important;
+  font-weight: 500;
+}
+
+/* Inputs dentro do modal:
+   - fundo branco (como na 2ª imagem)
+   - texto preto
+   - placeholder em cinzento */
+.modal .form-control,
+.modal textarea.form-control,
+.modal select.form-control,
+.modal input[type="text"],
+.modal input[type="date"],
+.modal input[type="datetime-local"],
+.modal input.flatpickr-input {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #3b3f41 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Placeholder */
+.modal .form-control::placeholder,
+.modal input::placeholder,
+.modal textarea::placeholder {
+  color: #6c757d !important;
+  opacity: 1 !important;
+}
+
+/* Textarea: garantir altura mínima */
+.modal textarea.form-control {
+  min-height: 80px;
+}
+
+/* Footer separator */
+.modal .modal-footer {
+  border-top: 1px solid rgba(255,255,255,0.03);
+}
+
+/* Small screens tweaks */
+@media (max-width: 575.98px) {
+  .modal-dialog-centered { padding: 1rem; }
+  .modal-content { margin: 0.5rem; }
+}
+
+/* ==========================
+   BADGES DE ESTADOS (Pagamentos)
+   ========================== */
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.675rem;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+/* Pendente -> Azul (Pendente) */
+.badge-pendente {
+  background-color: #0d6efd !important; /* azul */
+  color: #ffffff !important;
+}
+
+/* Pago -> Verde (Pago - distinto) */
+.badge-pago {
+  background-color: #198754 !important; /* verde (success) */
+  color: #ffffff !important;
+}
+
+/* Em Atraso -> Vermelho (Atrasado) */
+.badge-atrasado {
+  background-color: #dc3545 !important; /* vermelho */
+  color: #ffffff !important;
+}
+
+/* Cancelado -> Cinzento escuro */
+.badge-cancelado {
+  background-color: #6c757d !important;
+  color: #ffffff !important;
+}
+
+/* Confirmado -> Cyan/Turquesa */
+.badge-confirmado {
+  background-color: #0dcaf0 !important;
+  color: #041627 !important; /* texto escuro no ciano */
+}
+
+/* Concluído -> Verde escuro */
+.badge-concluido {
+  background-color: #0b5e3a !important;
+  color: #ffffff !important;
+}
+
+/* Entregue -> Verde claro / diferente do pago */
+.badge-entregue {
+  background-color: #5cb85c !important;
+  color: #ffffff !important;
+}
+
+/* Enviado -> Azul claro (diferente do pendente) */
+.badge-enviado {
+  background-color: #17a2b8 !important;
+  color: #ffffff !important;
+}
+
+/* Bloqueado -> Preto / muito escuro */
+.badge-bloqueado {
+  background-color: #212529 !important;
+  color: #ffffff !important;
+}
+
+/* Inativo -> Cinzento claro (com texto escuro) */
+.badge-inativo {
+  background-color: #adb5bd !important;
+  color: #222222 !important;
+}
+
+/* Suspenso -> Laranja / warning quente */
+.badge-suspenso {
+  background-color: #ffb703 !important; /* laranja/âmbar */
+  color: #111111 !important;
+}
+
+/* Disponível -> Roxo distinto */
+.badge-disponivel {
+  background-color: #6f42c1 !important; /* roxo */
+  color: #ffffff !important;
+}
+
+/* Processando -> Laranja-avermelhado */
+.badge-processando {
+  background-color: #fd7e14 !important; /* orange */
+  color: #ffffff !important;
+}
+
+/* Esgotado -> Vinho / bordô */
+.badge-esgotado {
+  background-color: #6f1e51 !important; /* maroon */
+  color: #ffffff !important;
+}
+
+/* Aguardando confirmação -> Amarelo padrão (warning) */
+.badge-aguardando {
+  background-color: #ffc107 !important;
+  color: #212529 !important;
+}
+
+/* Fallback (caso não haja correspondência) */
+.badge.bg-secondary {
+  background-color: #6c757d !important;
+  color: #ffffff !important;
+}
+
+/* Pequeno efeito hover */
+.badge-pendente:hover,
+.badge-pago:hover,
+.badge-atrasado:hover,
+.badge-confirmado:hover,
+.badge-concluido:hover,
+.badge-enviado:hover,
+.badge-entregue:hover,
+.badge-disponivel:hover {
+  filter: brightness(0.92);
+}
+
+/* Garantir que badges ocupam menos espaço em telas pequenas */
+@media (max-width: 575.98px) {
+  .badge { font-size: 0.6rem; padding: 0.2rem 0.4rem; }
+}
+.scroll-max-320 {
+  max-height: 320px;
+}
+.scroll-max-300 {
+  max-height: 300px;
+}
+.th-40 {
+  width: 40px;
+}
+.icon-75 {
+  width: 75px;
+  height: 75px;
+}
+
+/* ==========================
+   Botões específicos da tabela de eventos
+   ========================== */
+
+/* ==========================
+   Botões específicos da tabela de eventos (com verde mais claro)
+   ========================== */
+
+#listagemEventos .btn-success {
+  background-color: #28a745 !important; /* verde mais claro */
+  border-color: #28a745 !important;
+}
+
+#listagemEventos .btn-success:hover {
+  background-color: #218838 !important; /* ligeiramente mais escuro no hover */
+  border-color: #1e7e34 !important;
+}
+
+#listagemEventos .btn-primary {
+  background-color: #0d6efd !important; /* azul Bootstrap */
+  border-color: #0d6efd !important;
+}
+
+#listagemEventos .btn-primary:hover {
+  background-color: #0b5ed7 !important;
+  border-color: #0a58ca !important;
+}
+
+
+
+/* Campos de filtro na tabela Pagamentos - texto branco */
+#cardPagamentos input.form-control,
+#cardPagamentos .search input,
+#cardPagamentos input#date-range {
+  color: #ffffff !important;        /* texto branco */
+  background-color: #2b2f32 !important; /* fundo escuro coerente */
+  border: 1px solid #444 !important;
+}
+
+/* Placeholder também em branco, mas ligeiramente translúcido */
+#cardPagamentos input::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Ícone de pesquisa também visível */
+#cardPagamentos .search-icon {
+  color: #ffffff !important;
+}
+
+#listagemTarefas .btn-success {
+  background-color: #28a745 !important; /* verde mais claro */
+  border-color: #28a745 !important;
+}
+
+#listagemTarefas .btn-success:hover {
+  background-color: #218838 !important;
+  border-color: #1e7e34 !important;
+}
+
+#listagemTarefas .btn-primary {
+  background-color: #0d6efd !important; /* azul Bootstrap padrão */
+  border-color: #0d6efd !important;
+}
+
+#listagemTarefas .btn-primary:hover {
+  background-color: #0b5ed7 !important;
+  border-color: #0a58ca !important;
+}
+

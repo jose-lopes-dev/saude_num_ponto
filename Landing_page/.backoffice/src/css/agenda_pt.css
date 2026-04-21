@@ -1,0 +1,190 @@
+/* Camada 3: DISPONIBILIDADE semanal (verde fraquinho, não distrai) */
+.fc .evt-disp-bg {
+  background: rgba(170, 202, 28, 0.10) !important;
+}
+
+/* Camada 2: INDISPONIBILIDADE (escuro por cima da disponibilidade) */
+.fc .evt-indisp-bg {
+  background: rgba(0, 0, 0, 0.42) !important;
+}
+
+/* Garantir que background events não ficam com "pontos" ou outlines estranhos */
+.fc .fc-bg-event {
+  opacity: 1 !important;
+}
+
+/* ====== AGENDA TOPBAR (layout limpo) ====== */
+.agenda-card{
+  border: 1px solid rgba(255,255,255,.12) !important;
+  border-radius: 14px !important;
+  padding: 14px !important;
+  box-shadow: 0 12px 30px rgba(0,0,0,.35) !important;
+}
+
+.agenda-topbar{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  padding: 6px 6px 14px 6px !important;
+  border-bottom: 1px solid rgba(255,255,255,.10) !important;
+  margin-bottom: 12px !important;
+}
+
+.agenda-label{
+  color: #FBFBFA !important;
+  font-weight: 900 !important;
+  letter-spacing: .10em !important;
+  text-transform: uppercase !important;
+  font-size: 14px !important;
+  opacity: .9 !important;
+}
+
+.btn-agenda{
+  background: #AACA1C !important;
+  color: #090A0B !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  padding: 8px 14px !important;
+  font-weight: 900 !important;
+  letter-spacing: .02em !important;
+  cursor: pointer !important;
+  box-shadow: none !important;
+}
+.btn-agenda:hover{
+  filter: brightness(1.06) !important;
+}
+
+/* ====== FullCalendar: arrumar a toolbar dentro do card ====== */
+.agenda-card .fc .fc-toolbar{
+  margin: 14px 0 10px 0 !important;
+}
+
+.agenda-card .fc .fc-toolbar-title{
+  color: #FBFBFA !important;
+  font-weight: 900 !important;
+  letter-spacing: .10em !important;
+  text-transform: uppercase !important;
+  font-size: 18px !important;
+}
+
+/* Botões FC: mais consistentes com o teu lime */
+.agenda-card .fc .fc-button{
+  background: #AACA1C !important;
+  color: #090A0B !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  font-weight: 900 !important;
+  padding: 7px 12px !important;
+  box-shadow: none !important;
+}
+.agenda-card .fc .fc-button:hover{
+  filter: brightness(1.06) !important;
+}
+.agenda-card .fc .fc-button:focus,
+.agenda-card .fc .fc-button:active{
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* espaço entre grupos de botões */
+.agenda-card .fc .fc-toolbar-chunk{
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+/* ====== Botão "+N mais" com pill mais clean ====== */
+.agenda-card .fc .fc-more-link{
+  background: rgba(170,202,28,.22) !important;
+  color: #FBFBFA !important;
+  border-radius: 999px !important;
+  padding: 2px 8px !important;
+  text-decoration: none !important;
+  font-weight: 800 !important;
+}
+
+.swal2-popup .form-check-input{
+  border-color: rgba(255,255,255,.25) !important;
+  box-shadow: none !important;
+}
+
+.swal2-popup .form-check-input:checked{
+  background-color: #AACA1C !important;
+  border-color: #AACA1C !important;
+}
+
+.swal2-popup .form-check-input:focus{
+  box-shadow: 0 0 0 .2rem rgba(170,202,28,.18) !important;
+  border-color: #AACA1C !important;
+}
+
+.fc .evt-extra{
+  background: rgba(170,202,28,.18) !important;
+  border: 1px solid rgba(170,202,28,.55) !important;
+  color: #FBFBFA !important;
+}
+
+.swal2-popup input[type="time"]:disabled,
+.swal2-popup input[type="text"]:disabled {
+  background-color: rgba(255,255,255,.06) !important;
+  color: rgba(255,255,255,.45) !important;
+  border-color: rgba(255,255,255,.12) !important;
+  opacity: 1 !important; 
+}
+
+.swal2-popup input:focus {
+  box-shadow: none !important;
+  outline: none !important;
+  border-color: rgba(170,202,28,.45) !important;
+}
+
+/* Eventos */
+.fc .evt-extra{
+  background-color: rgba(255,255,255,.10) !important;
+  border: 1px solid rgba(170,202,28,.65) !important;
+  color: #FBFBFA !important;
+  font-weight: 400 !important;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.fc .evt-extra{
+  color: #FBFBFA !important;
+}
+
+.fc .evt-extra .fc-event-title,
+.fc .evt-extra .fc-event-title-container,
+.fc .evt-extra .fc-event-time{
+  color: #FBFBFA !important;
+}
+
+.fc .fc-daygrid-event.evt-extra,
+.fc .fc-daygrid-event.evt-extra .fc-event-title{
+  color: #FBFBFA !important;
+}
+
+.fc .fc-bg-event{
+  pointer-events: none !important;
+}
+
+.fc .fc-bg-event.evt-indisp-bg{
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+
+/* Etiqueta da AUSÊNCIA (evento normal) para aparecer no mês como as consultas */
+.fc .evt-indisp-label{
+  background: rgba(255, 64, 64, 0.20) !important;
+  border: 1px solid rgba(255, 64, 64, 0.65) !important;
+  color: #FBFBFA !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: .04em !important;
+}
+
+.fc .evt-indisp-label .fc-event-title,
+.fc .evt-indisp-label .fc-event-title-container,
+.fc .evt-indisp-label .fc-event-time{
+  color: #FBFBFA !important;
+}

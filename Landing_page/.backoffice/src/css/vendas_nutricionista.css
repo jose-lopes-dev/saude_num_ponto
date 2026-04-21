@@ -1,0 +1,64 @@
+/* ===== SELECT NORMAL ===== */
+select,
+select:focus,
+select:hover {
+    background-color: #fff !important;
+    color: #000 !important;
+    border: 1px solid #ced4da;
+    box-shadow: none !important;
+}
+
+/* remove roxo/azul ao hover/focus */
+select:hover,
+select:focus {
+    outline: none !important;
+    border-color: #ced4da !important;
+}
+
+/* ===== SELECT2 ===== */
+
+/* caixa do select */
+.select2-container--default .select2-selection--single {
+    background-color: #fff !important;
+    border: 1px solid #ced4da !important;
+    color: #000 !important;
+    box-shadow: none !important;
+}
+
+/* texto selecionado */
+.select2-container--default
+.select2-selection--single
+.select2-selection__rendered {
+    color: #000 !important;
+}
+
+/* dropdown */
+.select2-container--default .select2-dropdown {
+    background-color: #fff !important;
+    border: 1px solid #ced4da !important;
+}
+
+/* opções */
+.select2-container--default .select2-results__option {
+    color: #000 !important;
+    background-color: #fff !important;
+}
+
+/* hover NORMAL (sem roxo) */
+.select2-container--default
+.select2-results__option--highlighted {
+    background-color: #f1f1f1 !important;
+    color: #000 !important;
+}
+
+/* opção selecionada */
+.select2-container--default
+.select2-results__option[aria-selected="true"] {
+    background-color: #e9ecef !important;
+    color: #000 !important;
+}
+
+/* placeholder */
+.select2-container--default .select2-selection__placeholder {
+    color: #6c757d !important;
+}

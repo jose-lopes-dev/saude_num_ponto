@@ -1,0 +1,60 @@
+/* Área do gráfico */
+.chart-line {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dropdown do trimestre */
+#trimestreSelect {
+  color: #000 !important;
+  background-color: #fff !important;
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-weight: 500;
+}
+
+#trimestreSelect option {
+  color: #000 !important;
+}
+
+/* Título */
+#tituloTrimestre {
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Centralizar mensagem "sem dados" */
+#chart-line p {
+  font-size: 14px;
+  color: #ccc;
+  text-align: center;
+}
+
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Corpo do card deve preencher o restante espaço */
+.card-body {
+  flex: 1;
+}
+
+/* Altura uniforme dos gráficos */
+.chart-igual {
+  height: 350px;
+  width: 100%;
+}
+
+/* Garantir que ambos os gráficos ficam alinhados verticalmente */
+.apex-charts,
+.chart-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

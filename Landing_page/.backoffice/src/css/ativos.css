@@ -1,0 +1,36 @@
+.card .table tbody tr:last-child td {
+  border-bottom: 0 !important;   /* remove a linha da tabela */
+}
+
+/* Botão Editar (Consultas) - igual ao azul da dashboard */
+#listagemConsultas .btn-primary,
+#tabelaConsultas .btn-primary,
+#consultasTable .btn-primary,
+.btn-editar-consulta {
+  background-color: #0d6efd !important;
+  border-color: #0d6efd !important;
+  color: #ffffff !important;
+}
+
+#listagemConsultas .btn-primary:hover,
+#tabelaConsultas .btn-primary:hover,
+#consultasTable .btn-primary:hover,
+.btn-editar-consulta:hover {
+  background-color: #0b5ed7 !important;
+  border-color: #0a58ca !important;
+  color: #ffffff !important;
+}
+
+/* Reduz o espaço entre o título "ATIVOS" e o card seguinte */
+.page-title-box {
+  margin-bottom: 0.5rem !important;
+}
+
+/* Garante que a primeira row não adiciona gap extra */
+.page-content > .container-fluid > .row:first-of-type {
+  margin-bottom: 0.25rem !important;
+}
+
+
+
+

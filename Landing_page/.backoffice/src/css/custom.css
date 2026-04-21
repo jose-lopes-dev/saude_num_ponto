@@ -1,0 +1,40 @@
+/* Aumentar o select "Show entries" */
+.dataTables_length select {
+  width: 60px !important;   /* aumenta o tamanho */
+  height: 38px !important;   /* ajusta a altura */
+  font-size: 15px;
+  color: #15d835000;
+  border-radius: 8px;        /* bordas arredondadas */
+  padding: 5px 10px;
+}
+
+/* Ajustar o espaçamento e alinhamento do container superior */
+.dataTables_length,
+.dataTables_filter {
+  margin-bottom: 1rem;
+}
+
+/* Personalizar o campo de pesquisa */
+.dataTables_filter input {
+  width: 200px !important;
+  height: 38px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+}
+
+/* Melhorar aparência da paginação */
+.dataTables_paginate .paginate_button {
+  padding: 6px 12px;
+  margin: 0 3px;
+  border-radius: 6px;
+}
+
+.dataTables_paginate .paginate_button.current {
+  background-color: #0d6efd !important;
+  color: white !important;
+}
+
+
+

@@ -1,0 +1,22 @@
+/* ===== Corrigir campos do DataTables no modo escuro ===== */
+
+/* seletor "Show entries" */
+.dataTables_length select,
+.dataTables_length select option {
+  color: #fff !important;              /* texto branco */
+  background-color: #2c2c2c !important; /* fundo escuro */
+  border: 1px solid #444 !important;
+}
+
+/* campo "Search" */
+.dataTables_filter input[type="search"] {
+  color: #fff !important;               /* texto branco */
+  background-color: #2c2c2c !important; /* fundo escuro */
+  border: 1px solid #444 !important;
+}
+
+/* placeholder também branco/cinzento */
+.dataTables_filter input[type="search"]::placeholder {
+  color: #ccc !important;
+  opacity: 1;
+}

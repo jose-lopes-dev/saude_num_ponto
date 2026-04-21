@@ -1,0 +1,43 @@
+.table td, .table th {
+  vertical-align: middle;
+}
+
+.dataTables_wrapper { width: 100% !important; }
+table.dataTable { width: 100% !important; }
+.table-responsive { overflow-x: auto; }
+
+.badge-status {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.bg-success {
+  background: #22c55e !important;
+}
+
+.bg-danger {
+  background: #ef4444 !important;
+}
+
+/* Só tabelas dentro dos cards grandes PT */
+.pt-card-lg .table thead th{
+  background: #ffffff !important;
+  color: #000 !important;
+  border-bottom: 2px solid #444 !important;
+}
+
+/* Linha branca esticada só no BODY da tabela */
+.pt-card-lg .table tbody tr{
+  position: relative;
+}
+
+.pt-card-lg .table tbody tr::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.25);
+}

@@ -1,0 +1,437 @@
+/* =========================================================
+   CALENDÁRIO - NOVO ESTILO
+   SEM AZUIS E SEM ROXOS. Só cores reais do projeto.
+========================================================= */
+
+#calendar-full {
+    min-height: 700px;
+    font-family: inherit;
+}
+
+/* ===================== TOOLBAR ===================== */
+
+.fc .fc-toolbar {
+    margin-bottom: 20px;
+}
+
+.fc .fc-toolbar-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 1rem;
+    color: #FBFBFA;
+}
+
+/* Botões principais */
+.fc .fc-button {
+    background-color: #202124;
+    border: 1px solid #2b2c30;
+    color: #FBFBFA;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    padding: 4px 12px;
+    transition: 0.15s;
+}
+
+.fc .fc-button:not(:disabled):hover {
+    background-color: #2d2e33;
+}
+
+/* Botões ativos e "hoje" = VERDE */
+.fc .fc-button-primary,
+.fc .fc-button.fc-button-active {
+    background-color: #AACA1C;
+    border-color: #AACA1C;
+    color: #090A0B;
+}
+
+.fc .fc-button-primary:not(:disabled):hover,
+.fc .fc-button.fc-button-active:not(:disabled):hover {
+    background-color: #bbdb1f;
+}
+
+/* Icones prev/next */
+.fc .fc-prev-button, .fc .fc-next-button {
+    background-color: #18191A;
+}
+
+/* ===================== CABEÇALHO DOS DIAS ===================== */
+
+.fc .fc-col-header {
+    background-color: #18191A;
+}
+
+/* ===================== DIAS ===================== */
+
+.fc-theme-standard .fc-scrollgrid {
+    border-color: #2b2c30;
+}
+
+.fc-theme-standard td, 
+.fc-theme-standard th {
+    border-color: #2b2c30;
+}
+
+.fc .fc-daygrid-day-number {
+    color: #e6e6e6;
+    font-size: 0.78rem;
+}
+
+.fc .fc-day-today {
+    background-color: rgba(170, 202, 28, 0.13);
+}
+
+/* Hover subtil */
+.fc .fc-daygrid-day-frame:hover {
+    background-color: rgba(255, 255, 255, .02);
+}
+
+/* ===================== EVENTOS (CONSULTAS) ===================== */
+
+.fc .fc-daygrid-event,
+.fc .fc-timegrid-event {
+    background-color: #AACA1C; /* verde */
+    border-radius: 6px;
+    border: none;
+    padding: 2px 6px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #090A0B;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+}
+
+.fc .fc-daygrid-event:hover {
+    filter: brightness(1.1);
+}
+
+/* ===================== RESPONSIVO ===================== */
+
+@media(max-width:768px) {
+    .fc .fc-toolbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* ===================== OVERRIDES FINAIS ===================== */
+/* Dias da semana visíveis, sem barra branca estúpida */
+
+.fc-theme-standard .fc-scrollgrid thead tr {
+    background-color: #ffffff !important; 
+}
+
+.fc .fc-col-header-cell,
+.fc .fc-col-header-cell-cushion {
+    background-color: transparent !important;
+    color: #090A0B !important;             
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+/* ===================== BOTÕES (sem azul bootstrap) ===================== */
+
+.fc .fc-button,
+.fc .fc-button-primary,
+.fc .fc-button-group .fc-button,
+.fc .fc-today-button {
+    background-color: #AACA1C !important;
+    border-color: #AACA1C !important;
+    color: #090A0B !important;
+    border-radius: 8px !important;
+    font-size: 0.8rem;
+    font-weight: 500 !important;
+}
+
+.fc .fc-button:not(:disabled):hover,
+.fc .fc-button-primary:not(:disabled):hover,
+.fc .fc-button.fc-button-active:not(:disabled):hover,
+.fc .fc-today-button:not(:disabled):hover {
+    background-color: #AACA1C !important;
+    border-color: #3a3b40 !important;
+}
+
+/* Botões “ativos” (Mês/Semana/Dia selecionado + Hoje) em VERDE LIMA */
+
+.fc .fc-button-primary.fc-button-active,
+.fc .fc-button.fc-button-active,
+.fc .fc-today-button.fc-button-primary {
+    background-color: #AACA1C !important;
+    border-color: #AACA1C !important;
+    color: #090A0B !important;
+}
+
+/* ===================== HOJE (sem círculo roxo random) ===================== */
+
+/* Fundo do dia de hoje */
+.fc .fc-daygrid-day.fc-day-today {
+    background-color: rgba(170, 202, 28, 0.10) !important;
+}
+
+/* Número do dia de hoje com “pill” verde */
+.fc .fc-daygrid-day.fc-day-today .fc-daygrid-day-number {
+    background-color: #AACA1C !important;
+    color: #090A0B !important;
+    border-radius: 999px;
+    padding: 2px 8px;
+}
+
+/* ===================== EVENTOS (mantém verde lima, ajusta contraste) ===================== */
+
+.fc .fc-daygrid-event,
+.fc .fc-timegrid-event {
+    background-color: #AACA1C !important;
+    color: #090A0B !important;
+    border: none !important;
+    border-radius: 6px !important;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+/***********************************************************
+ * FIXES VISTA SEMANA / DIA
+ **********************************************************/
+
+/* Fundo do "dia selecionado" (estava roxo) */
+.fc .fc-timegrid-col.fc-day-today, 
+.fc .fc-timegrid-col.fc-day-today .fc-timegrid-bg {
+    background-color: rgba(170, 202, 28, 0.10) !important;
+}
+
+/* Cor dos números das horas */
+.fc .fc-timegrid-slot-label-cushion {
+    color: #e6e6e6 !important;
+    font-size: 0.75rem;
+}
+
+/* Garantir que os eventos em timeGrid têm letra preta */
+.fc .fc-timegrid-event .fc-event-title,
+.fc .fc-timegrid-event {
+    color: #090A0B !important;
+}
+
+/* Eventos não colarem na borda */
+.fc .fc-timegrid-event {
+    border-radius: 6px !important;
+    padding: 2px 6px !important;
+}
+
+/* Tooltip das horas (those floating blue labels) */
+.fc .fc-timegrid-slot-label-frame {
+    background: none !important;
+    color: #e6e6e6 !important;
+}
+
+/* Hover do evento na vista semanal */
+.fc .fc-timegrid-event:hover {
+    filter: brightness(1.1);
+}
+
+/* botão VOLTAR específico desta página */
+.btn-cal-voltar {
+    background-color: #101216;
+    border: 1px solid #373c46;
+    color: #FBFBFA;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    padding: 4px 14px;
+}
+
+.btn-cal-voltar:hover {
+    background-color: #2b3039;
+    border-color: #4b505c;
+    color: #FBFBFA;
+}
+
+/* espaçamento entre os botões prev / next / today */
+.fc .fc-toolbar-chunk:first-child .fc-button {
+    margin-right: 0.4rem;
+}
+
+/* espaçamento entre Mês / Semana / Dia */
+.fc .fc-toolbar-chunk:last-child .fc-button {
+    margin-left: 0.3rem;
+}
+
+/* bordas da grelha em cinzento discreto */
+.fc-theme-standard .fc-scrollgrid,
+.fc-theme-standard td,
+.fc-theme-standard th {
+    border-color: #6b6b6b56 !important;
+}
+
+/* linhas da vista semanal / diária */
+.fc .fc-timegrid-slot,
+.fc .fc-timegrid-axis {
+    border-color: #6b6b6b56 !important;
+}
+
+/* altura fixa do evento */
+.fc .fc-daygrid-event {
+  height: 22px!important;
+  overflow: hidden!important;
+  white-space: nowrap!important;
+  text-overflow: ellipsis!important;
+}
+
+/* espaçamento consistente entre linhas de eventos */
+.fc .fc-daygrid-event-harness {
+  margin-top: 4px!important;
+}
+
+/* o link "+N more" não empurra nem muda o alinhamento visual */
+.fc .fc-daygrid-more-link {
+  margin-top: 4px!important;
+  line-height: 22px!important;     
+  font-size: 12px!important;
+  text-decoration: none!important;
+}
+
+.fc .fc-daygrid-day-events {
+  min-height: calc((22px * 2) + (4px * 2) + 22px) !important; /* altura para 2 eventos + espaçamentos + linha "+N more" */
+}
+
+/* Popover do "+N mais" */
+.fc .fc-popover {
+  background-color: #1e1e1e!important;
+  border: 1px solid #333!important;
+  border-radius: 8px!important;
+  box-shadow: 0 8px 25px rgba(0,0,0,.6)!important;
+  color: #f0f0f0!important;
+}
+
+/* Header do popover */
+.fc .fc-popover-header {
+  background-color: #121313!important;
+  border-bottom: 1px solid #333!important;
+  padding: 8px 12px!important;
+}
+
+/* Título (data) */
+.fc .fc-popover-title {
+  color: #ccc;
+  font-weight: 600!important;
+  font-size: 13px!important;
+}
+
+/* Botão fechar */
+.fc .fc-popover-close {
+  color: #aaa;
+  font-size: 16px!important;
+}
+.fc .fc-popover-close:hover {
+  color: #fff!important;
+}
+
+/* Corpo do popover */
+.fc .fc-popover-body {
+  padding: 10px!important;
+}
+
+/* Eventos dentro do popover */
+.fc .fc-popover-body .fc-daygrid-event {
+  background-color: #AACA1C!important;
+  border: none!important;
+  border-radius: 6px!important;
+  color: #090A0B!important;
+  font-weight: 600!important;
+  height: 24px!important;
+  line-height: 24px!important;
+  padding: 0 8px!important;
+  margin-bottom: 6px!important;
+}
+
+/* Remove o estilo "dot" se aparecer */
+.fc .fc-popover-body .fc-daygrid-dot-event {
+  background: #AACA1C!important;
+}
+
+.fc .fc-popover {
+  min-width: 220px!important;
+}
+
+/* POPUP "+N mais" */
+.fc .fc-popover {
+  background-color: #1e1e1e !important;
+  border: 1px solid #333 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,.65) !important;
+  color: #f0f0f0 !important;
+  overflow: hidden !important;
+  min-width: 240px !important;
+}
+
+.fc .fc-popover-header {
+  background-color: #121313 !important;
+  border-bottom: 1px solid #333 !important;
+  padding: 10px 12px !important;
+}
+
+.fc .fc-popover-title {
+  color: #ddd !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+}
+
+.fc .fc-popover-close {
+  color: #aaa !important;
+  font-size: 18px !important;
+  opacity: 1 !important;
+}
+.fc .fc-popover-close:hover {
+  color: #fff !important;
+}
+
+/* corpo */
+.fc .fc-popover-body {
+  padding: 12px !important;
+}
+
+/* eventos dentro do popover */
+.fc .fc-popover-body .fc-daygrid-event {
+  background-color: #AACA1C !important;
+  border: none !important;
+  border-radius: 8px !important;
+  color: #090A0B !important;
+  font-weight: 800 !important;
+  height: 26px !important;
+  line-height: 26px !important;
+  padding: 0 10px !important;
+  margin: 0 0 8px 0 !important;
+}
+
+/* LINK "+N mais" no mês (fora do popover) */
+.fc .fc-daygrid-more-link {
+  display: inline-block !important;
+  margin-top: 6px !important;
+  padding: 3px 8px !important;
+  border-radius: 999px !important;
+  background: rgba(170, 202, 28, 0.12) !important;
+  color: #AACA1C !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+}
+
+.fc .fc-daygrid-more-link:hover {
+  background: rgba(170, 202, 28, 0.18) !important;
+  text-decoration: none !important;
+}
+
+/* SweetAlert SEMPRE acima do FullCalendar */
+.swal2-container { 
+  z-index: 99999 !important; 
+}
+
+/* E opcionalmente baixa o popover do FC para não se meter */
+.fc .fc-popover {
+  z-index: 9990 !important;
+}
+
+.fc .fc-daygrid-event,
+.fc .fc-timegrid-event {
+  cursor: pointer !important;
+}
+

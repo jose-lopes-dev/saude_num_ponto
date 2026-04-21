@@ -1,0 +1,262 @@
+/* Card Styles */
+.pt-card {
+    background: #2b2c2c;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 26px 24px; 
+    min-height: 120px; 
+    transition: background-color 0.18s ease-out,
+                border-color 0.18s ease-out,
+                box-shadow 0.18s ease-out,
+                transform 0.18s ease-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.pt-card-title {
+    font-size: 0.85rem;
+    color: #c7c7c7;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.pt-card-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.pt-card small {
+    opacity: .7;
+}
+
+.row.g-3.mb-4 {
+    margin-bottom: 2.2rem !important;
+}
+
+.pt-card:hover {
+    background-color: #323334; 
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.55);
+    transform: translateY(-2px);
+}
+
+/* Table Styles */
+.estado-badge {
+    font-size: 0.70rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 999px;
+}
+
+#tabelaClientesPt tbody tr {
+    transition: background-color 0.15s ease-out;
+}
+
+#tabelaClientesPt tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+#tabelaClientesPt .btn-sm {
+    padding: 0.20rem 0.45rem;
+    border-radius: 6px;
+}
+
+#tabelaClientesPt .btn-sm i {
+    font-size: 0.9rem;
+}
+
+table {
+  width: 100% !important;
+}
+
+/* Button Styles */
+.btn-success.btn-sm {
+    background-color: transparent;
+    border-color: #2ecc71;
+    color: #2ecc71;
+}
+
+.btn-success.btn-sm:hover {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+.btn-warning.btn-sm {
+    background-color: transparent;
+    border-color: #f4c542;
+    color: #f4c542;
+}
+
+.btn-warning.btn-sm:hover {
+    background-color: #f4c542;
+    color: #000;
+}
+
+.btn-danger.btn-sm {
+    background-color: transparent;
+    border-color: #e74c3c;
+    color: #e74c3c;
+}
+
+.btn-danger.btn-sm:hover {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+
+/* Alinhamento e espaçamento do footer da DataTable */
+.dataTables_wrapper .dataTables_info {
+    padding-top: .5rem;
+    font-size: 0.8rem;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    padding-top: .5rem;
+}
+
+/* Paginação alinhada à direita */
+.dataTables_wrapper .dataTables_paginate .pagination {
+    justify-content: flex-end;
+}
+
+/* Estilo dos botões de página no tema dark */
+.dataTables_wrapper .dataTables_paginate .page-link {
+    background-color: #262626;
+    border-color: #444;
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.dataTables_wrapper .dataTables_paginate .page-link:hover {
+    background-color: #3a3b3b;
+    border-color: #666;
+    color: #fff;
+}
+
+.dataTables_wrapper .dataTables_paginate .page-item.active .page-link {
+    background-color: #AACA1C;  
+    border-color: #444;
+}
+
+/* Select 'Show 10 entries' e search com ar mais clean */
+.dataTables_wrapper .dataTables_length label,
+.dataTables_wrapper .dataTables_filter label {
+    font-size: 0.8rem;
+    color: #c7c7c7;
+}
+
+/* Input de pesquisa no tema dark */
+.dataTables_wrapper .dataTables_filter input {
+    background-color: #1f2020!important;
+    border: 1px solid #444!important;
+    color: #fff !important; 
+    border-radius: 6px!important;
+    padding: 0.15rem 0.5rem!important;
+    font-size: 0.8rem!important;
+}
+
+.dataTables_wrapper {
+    overflow-x: hidden;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    margin: 0 6px !important;     
+    border-radius: 6px !important; 
+}
+
+/* Ajuste do dropdown de seleção de entradas visíveis */
+.dataTables_wrapper .dataTables_length select {
+    background-color: #1f2020!important;
+    border: 1px solid #444!important;
+    color: #fff !important; 
+    border-radius: 6px!important;
+    font-size: 0.8rem!important;
+}
+.dataTables_wrapper .dataTables_length select option {
+    background-color: #1f2020;
+    color: #fff;
+    border-color: #444;
+}
+
+.dataTables_wrapper thead th {
+    border-bottom: 2px solid #444 !important;
+}
+.dataTables_wrapper tbody td {
+    border-bottom: 1px solid #333 !important;
+}
+
+/* Afastar barra superior (Show + Search) das bordas */
+#tabelaClientesPt_wrapper .dataTables_length,
+#tabelaClientesPt_wrapper .dataTables_filter {
+    padding: 0 20px !important;
+    margin-top: 10px !important;
+}
+
+/* Afastar barra inferior (Showing X entries + Paginação) */
+#tabelaClientesPt_wrapper .dataTables_info,
+#tabelaClientesPt_wrapper .dataTables_paginate {
+    padding: 0 20px !important;
+}
+
+/* Afasta a paginação especificamente para não ficar colada */
+#tabelaClientesPt_wrapper .dataTables_paginate {
+    margin-top: 10px;
+}
+
+/* Card grande com o mesmo estilo dos cards de stats */
+.pt-card-lg {
+  background: #2b2c2c !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Header do card grande igual ao tema */
+.pt-card-lg .card-header {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  padding: 18px 20px !important;
+}
+
+/* Título e "Total" com o mesmo vibe */
+.pt-card-lg .card-header h5 {
+  color: #fff !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+}
+
+.pt-card-lg .card-header small,
+.pt-card-lg .card-header .text-muted {
+  color: rgba(255,255,255,0.65) !important;
+}
+
+/* matar os backgrounds do DataTables (odd/even) e ficar como no dashboard */
+#tabelaClientesPt.dataTable tbody tr,
+#tabelaClientesPt.dataTable tbody tr.odd,
+#tabelaClientesPt.dataTable tbody tr.even{
+  background: transparent !important;
+}
+
+/* garantir que nada pinta os cells */
+#tabelaClientesPt.dataTable tbody td{
+  background: transparent !important;
+}
+
+/* ====== MATAR ZEBRA/BLOCOS DO DATATABLES (Clientes) ====== */
+#tabelaClientesPt.dataTable.stripe > tbody > tr.odd > *,
+#tabelaClientesPt.dataTable.display > tbody > tr.odd > *,
+#tabelaClientesPt.dataTable.stripe > tbody > tr.even > *,
+#tabelaClientesPt.dataTable.display > tbody > tr.even > *{
+  background: transparent !important;
+  box-shadow: none !important; /* DataTables usa inset shadow */
+}
+
+/* garantir também no <tr> (alguns temas pintam o tr) */
+#tabelaClientesPt.dataTable > tbody > tr{
+  background: transparent !important;
+}
+
+/* opcional: se o teu global anda a meter uma linha extra via ::after e fica “dupla” */
+#tabelaClientesPt tbody tr::after{
+  display: none !important;
+}

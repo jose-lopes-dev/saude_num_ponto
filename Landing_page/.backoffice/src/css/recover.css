@@ -1,0 +1,26 @@
+/* Centrar MESMO */
+.section{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: translateY(-30px);
+}
+
+
+/* Mata o empurrão do login.css (tens margens duplicadas lá) */
+.card-3d-wrap{
+  margin: 0 auto !important;
+}
+
+/* IMPORTANTÍSSIMO:
+   No recuperar não precisas do flip, então deixa o card "normal"
+   para o pai ganhar altura e o flex centrar direito */
+.card-front{
+  position: relative !important;
+}
+
+.card-3d-wrapper{
+  height: auto !important;
+}

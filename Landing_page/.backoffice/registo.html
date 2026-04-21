@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  data-layout="vertical"
+  data-topbar="light"
+  data-sidebar="dark"
+  data-sidebar-size="lg"
+  data-sidebar-image="none"
+  data-bs-theme="dark"
+  data-body-image="img-1"
+  data-preloader="disable"
+>
+  <head>
+    <meta charset="utf-8" />
+    <title>Registro | Seu Sistema</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/images/Logo.png " />
+
+    <!-- CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="src/css/sidebar.css">
+    <link rel="stylesheet" href="src/css/sweetalertFinalVersion.css">
+    
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+
+  <body>
+    <div class="auth-page-wrapper pt-5">
+      <div class="auth-page-content">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6 col-xl-5">
+              <div class="card mt-4 card-bg-fill">
+                <div class="card-body p-4">
+                  <div class="text-center mt-2">
+                    <h5 class="text-primary">Crie a sua conta!</h5>
+                    <p class="text-muted">Registre-se para começar</p>
+                  </div>
+                  <div class="p-2 mt-4">
+                    <form id="registoForm">
+                      <div class="mb-3">
+                        <label for="username" class="form-label"
+                          >E-mail</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="username"
+                          placeholder="Insira o seu nome de utilizador"
+                          required
+                        />
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="password" class="form-label">Senha</label>
+                        <div class="position-relative auth-pass-inputgroup mb-3">
+                        <input type="password" class="form-control pe-5" placeholder="Crie uma senha" id="password" required/>                         
+                          <button
+                            class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon"
+                            type="button"
+                            id="password-addon"
+                          >
+                            <i class="ri-eye-fill align-middle"></i>
+                          </button>
+                        </div>
+                      </div>  
+                      
+                      <div class="mb-3">
+                        <label for="password2" class="form-label">Confirmar Senha</label>
+                        <div class="position-relative auth-pass-inputgroup mb-3">
+                        <input type="password" class="form-control pe-5" id="password2" placeholder="Confirme a senha" required/>
+                         <button
+                            class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon"
+                            type="button"
+                            id="password-addon1"
+                          >
+                            <i class="ri-eye-fill align-middle"></i>
+                          </button>
+                        </div>
+                      </div>  
+
+                      <div class="mt-4">
+                        <button type="submit" class="btn btn-success w-100">Registar</button>
+                          
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-4 text-center">
+                <p class="mb-0">
+                  Já tem uma conta?
+                  <a
+                    href="login.html"
+                    class="fw-semibold text-primary text-decoration-underline"
+                  >
+                    Login
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bibliotecas base -->
+<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/libs/simplebar/simplebar.min.js"></script>
+<script src="assets/libs/node-waves/waves.min.js"></script>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- Script Login -->
+<script src="src/js/login.js"></script>
+
+<!-- Script específico da página -->
+<script>
+$(document).ready(function () {
+
+  // Mostrar/Ocultar senha
+  $('.password-addon').on('click', function () {
+    const input = $(this).siblings('input');
+    const icon = $(this).find('i');
+
+    if (input.attr('type') === 'password') {
+      input.attr('type', 'text');
+      icon.removeClass('ri-eye-fill').addClass('ri-eye-off-fill');
+    } else {
+      input.attr('type', 'password');
+      icon.removeClass('ri-eye-off-fill').addClass('ri-eye-fill');
+    }
+  });
+
+  // Validação em tempo real
+  $('#password2').on('input', function(){
+    const pass = $('#password').val();
+    const pass2 = $('#password2').val();
+
+    if(pass2 && pass !== pass2){
+      $('#password2').addClass('error');
+    } else {
+      $('#password2').removeClass('error');
+    }
+  });
+
+  $('#username').on('input', function(){
+    const email = $(this).val();
+    const regex = /^[^@]+@[^@]+\.[^@]+$/;
+    if(!regex.test(email)){
+      $(this).addClass('error');
+    } else {
+      $(this).removeClass('error');
+    }
+  });
+
+  // Submeter formulário
+  $('#registoForm').on('submit', function (e) {
+    e.preventDefault();
+    const pass = $('#password').val();
+    const pass2 = $('#password2').val();
+    if(pass !== pass2){
+      Swal.fire('Erro', 'As senhas não coincidem!', 'error');
+      return;
+    }
+    registaUser();
+  });
+});
+</script>
+
+
+  </body>
+</html>

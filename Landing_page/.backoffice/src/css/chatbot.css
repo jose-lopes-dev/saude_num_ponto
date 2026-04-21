@@ -1,0 +1,274 @@
+/* ============================
+       BACKGROUND
+============================ */
+body.chat-fullscreen {
+    background: #141414;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    color: #fff;
+}
+
+/* ============================
+       CHAT CONTAINER
+============================ */
+.chat-container {
+    width: 75%;
+    max-width: 900px;
+    height: 85vh;
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #2b2c2c !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 30px !important;
+    box-shadow: 0 10px 24px rgba(219, 219, 219, 0.35) !important;
+}
+
+/* ============================
+       HEADER
+============================ */
+.chat-header {
+    background: #aaca1c;
+    color: #000;
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 3px #fff;
+    position: relative;
+    
+}
+
+.status-dot {
+    width: 14px;
+    height: 14px;
+    background: #aaca1c;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #aaca1c;
+}
+
+/* ============================
+       CHAT BODY
+============================ */
+.chat-body {
+    flex: 1;
+    padding: 20px 30px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+/* reduzir a barra de scroll */
+.chat-body::-webkit-scrollbar {
+    width: 6px;
+}
+.chat-body::-webkit-scrollbar-thumb {
+    background: #aaca1c;
+    border-radius: 10px;
+}
+
+/* ============================
+       MENSAGENS
+============================ */
+.msg {
+    margin-bottom: 15px;
+    display: flex;
+    opacity: 0;
+    animation: fadeIn 0.35s forwards;
+}
+
+.msg.bot p,
+.msg.user p {
+    padding: 12px 16px;
+    max-width: 70%;
+    border-radius: 14px;
+    line-height: 1.45;
+    font-size: 15px;
+}
+
+/* BOT */
+.msg.bot p {
+    background: rgba(0, 0, 0, 0.7);
+    color: #d0ff00d8;
+    border-left: 4px solid #aaca1c;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    font-weight: 600;
+}
+
+/* USER */
+.msg.user {
+    justify-content: flex-end;
+}
+
+.msg.user p {
+    background: #aaca1c;
+    border-right: 4px solid #000000;
+    color: #000;
+    font-weight: 600;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+}
+
+/* ============================
+       INPUT AREA
+============================ */
+.chat-input-area {
+    display: flex;
+    padding: 14px;
+    background: #aaca1c;
+    gap: 10px;
+}
+
+.chat-input-area .chat-input {
+    background: rgba(249, 250, 249, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    color: #1d1d1d;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.chat-input-area .chat-input:focus {
+    box-shadow: 0 0 12px rgba(253, 253, 253, 0.4);
+    border-color: #fdfdfd;
+}
+
+/* BOTÃO */
+.btn-success {
+    background: rgba(15, 15, 15);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0 10px #aaca1c;
+    transition: 0.3s;
+}
+
+.btn-success:hover {
+    background: #1f1f1f;
+    transform: scale(1.03);
+    color: #fcfcfc;
+    border-color: #1f1f1f ;
+}
+
+/* ============================
+       OPÇÕES DO BOT
+============================ */
+.opcao {
+    background: rgba(15, 15, 15, 0.75);
+    padding: 10px;
+    color: #aaca1c;
+    border: none;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.opcao:hover {
+    background: #aaca1c;
+    color: black;
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px rgba(0, 255, 80, 0.4);
+}
+
+/* ============================
+       ANIMAÇÕES
+============================ */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.avatar-xs {
+    height: 3rem;
+    width: 3rem;
+}
+
+/* chat grande com o mesmo estilo dos chats de stats */
+.pt-chat-lg {
+    background: #2b2c2c !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Header do chat grande igual ao tema */
+.pt-chat-lg .chat-header {
+    background: transparent !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding: 18px 20px !important;
+}
+
+/* Título e "Total" com o mesmo vibe */
+.pt-chat-lg .chat-header h5 {
+    color: #fff !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+}
+
+.pt-chat-lg .chat-header small,
+.pt-chat-lg .chat-header .text-muted {
+    color: rgba(255, 255, 255, 0.65) !important;
+}
+
+/* ============================
+   INFO ICON ( ⓘ ) – SAFE FIX
+============================ */
+
+.info-icon {
+    margin-left: 8px;
+    cursor: pointer;
+    font-weight: 800;
+    color: #aaca1c;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.info-icon:hover::after,
+.info-icon:hover::before {
+    opacity: 1;
+}
+
+
+/* mobile friendly */
+@media (max-width: 768px) {
+    .info-icon::after {
+        width: 220px;
+        font-size: 0.75rem;
+    }
+}
+
+.msg {
+    margin-bottom: 15px;
+    display: flex;
+    opacity: 0;
+    animation: fadeIn 0.35s forwards;
+
+    position: relative;      /* 🔥 NECESSÁRIO */
+    overflow: visible;       /* 🔥 NECESSÁRIO */
+}
+
+.pergunta-tipo-corpo {
+  overflow: visible;
+}
+
+.pergunta-tipo-corpo .info-icon::after {
+  top: auto;
+  bottom: 50%;
+  transform: translateY(50%);
+}
+
+.msg.bot p {
+    overflow: visible;
+}

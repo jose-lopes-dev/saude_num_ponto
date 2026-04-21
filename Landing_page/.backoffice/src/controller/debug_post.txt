@@ -1,0 +1,21 @@
+2025-12-11T22:25:44+01:00 POST:
+Array
+(
+    [acao] => prestadores
+    [id_servico] => 2
+)
+
+2025-12-11T22:25:52+01:00 POST:
+Array
+(
+    [acao] => prestadores
+    [id_servico] => 2
+)
+
+2025-12-11T22:27:32+01:00 POST:
+Array
+(
+    [acao] => prestadores
+    [id_servico] => 2
+)
+

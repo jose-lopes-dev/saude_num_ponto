@@ -1,0 +1,527 @@
+/* ================================
+   CHECKOUT (tema do site)
+   Paleta: #090A0B / #121313 / #AACA1C / #FBFBFA
+================================ */
+
+:root{
+  --bg0:#090A0B;
+  --bg1:#121313;
+  --lime:#AACA1C;
+  --white:#FBFBFA;
+  --red:#e74c3c;
+}
+
+/* page */
+.checkout-page{
+  min-height: 100vh;
+  background: #0E0F10 !important;
+  color: var(--white);
+}
+
+/* mata estilos default “roxos/azuis” */
+.checkout-page input,
+.checkout-page button,
+.checkout-page a{
+  outline: none !important;
+}
+
+/* CHECKBOX / RADIO: adeus roxo */
+.checkout-page input[type="checkbox"],
+.checkout-page input[type="radio"]{
+  accent-color: var(--lime);
+}
+
+/* INPUTS: adeus branco */
+.checkout-page input[type="text"],
+.checkout-page input[type="email"],
+.checkout-page input[type="number"],
+.checkout-page input[type="tel"],
+.checkout-page input[type="password"],
+.checkout-page textarea,
+.checkout-page select{
+  width:100%;
+  border-radius:12px;
+  padding:10px 12px;
+  background: rgba(255,255,255,.06) !important;
+  border: 1px solid rgba(255,255,255,.10) !important;
+  color: var(--white) !important;
+  box-shadow: none !important;
+}
+
+.checkout-page input::placeholder{
+  color: rgba(251,251,250,.55) !important;
+}
+
+.checkout-page input:focus,
+.checkout-page textarea:focus,
+.checkout-page select:focus{
+  border-color: rgba(170,202,28,.55) !important;
+  box-shadow: 0 0 0 3px rgba(170,202,28,.12) !important;
+}
+
+/* TOPBAR */
+.checkout-topbar{
+  height: 70px !important;
+  background: var(--bg1) !important;
+  border-bottom: 1px solid rgba(255,255,255,.08) !important;
+  padding: 0 !important; /* IMPORTANTE: sem padding aqui */
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  box-shadow: none !important;
+}
+
+.checkout-topbar-inner{
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 28px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+
+.checkout-title{
+  margin: 0 !important;
+  font-size: 22px !important;
+  font-weight: 900 !important;
+  color: var(--lime) !important;
+  letter-spacing: .2px !important;
+  text-decoration: underline;
+  line-height: 1 !important;
+}
+
+/* Botão topbar: texto centrado e fonte consistente */
+.btn-ghost{
+  font-family: inherit !important;
+  font-weight: 800 !important;
+  font-size: 14px !important;
+
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  line-height: 1 !important;
+  padding: 12px 16px !important;
+
+  border-radius: 12px !important;
+  border: 1px solid rgba(170,202,28,0.65) !important;
+  background: transparent !important;
+
+  color: #AACA1C !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+}
+
+.btn-ghost:hover{
+  background: rgba(170,202,28,0.15) !important;
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+
+/* layout */
+.checkout-wrap{
+  max-width: 1120px;
+  margin: 36px auto;
+  padding: 0 20px;
+}
+
+.checkout-grid{
+  display:grid;
+  grid-template-columns: 1.25fr .9fr;
+  gap: 22px;
+  align-items:start;
+}
+
+/* cards */
+.card-dark{
+  border-radius: 16px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 18px 50px rgba(0,0,0,.40);
+  overflow:hidden;
+  width: 100%;
+}
+
+.card-head{
+  padding: 18px 20px;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.card-title{
+  margin:0;
+  font-weight:900;
+  color: var(--white);
+  font-size:16px;
+}
+
+.card-subtitle-1{
+  color: rgba(251,251,250,.70) !important;
+}
+
+.card-body{
+  padding: 18px 20px 20px;
+}
+
+/* buyer box */
+.buyer-box{
+  background: rgba(0,0,0,.25);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 14px;
+}
+
+.buyer-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom: 10px;
+}
+
+.buyer-title{
+  font-weight: 900;
+  color: var(--white);
+  font-size: 13px;
+  opacity: .9;
+}
+
+.buyer-alt{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size: 13px;
+  opacity: .85;
+  user-select:none;
+}
+
+.buyer-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.buyer-field label{
+  display:block;
+  font-size:12px;
+  opacity:.75;
+  margin-bottom:6px;
+}
+
+.buyer-field input[readonly]{
+  opacity: .85;
+}
+
+.buyer-terms{
+  margin-top: 12px;
+}
+
+.terms-line{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:13px;
+  opacity:.85;
+}
+
+.buyer-coupon{
+  margin-top: 12px;
+}
+
+.coupon-row{
+  display:flex;
+  gap:10px;
+  align-items:stretch;
+}
+
+.coupon-row input{
+  flex:1;
+}
+
+.btn-coupon{
+  border: 1px solid rgba(170,202,28,0.65) !important;
+  background: rgba(170,202,28,0.12) !important;
+  color: var(--lime) !important;
+  border-radius: 12px !important;
+  padding: 10px 14px !important;
+  font-weight: 900 !important;
+  cursor:pointer;
+  transition: all .15s ease-out;
+}
+.btn-coupon:hover{
+  background: rgba(170,202,28,0.18) !important;
+  transform: translateY(-1px);
+}
+
+.coupon-msg{
+  margin-top: 8px;
+  font-size: 12px;
+  opacity: .85;
+}
+
+/* payment */
+.payment-box{
+  background: rgba(0,0,0,.35);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+#card-container{
+  width: 100%;
+  min-height: 70px;
+}
+
+#card-container,
+#card-container *{
+  color: rgba(251,251,250,.70) !important;
+}
+
+#card-errors{
+  color: rgba(251,251,250,.70) !important;
+}
+
+/* pay button */
+.btn-pay{
+  width: 100%;
+  margin-top: 14px;
+  border: 0 !important;
+  border-radius: 12px !important;
+  padding: 14px 16px !important;
+  font-weight: 900 !important;
+  background: var(--lime) !important;
+  color: var(--bg0) !important;
+  transition: filter .15s ease-out, transform .15s ease-out;
+  box-shadow: 0 10px 30px rgba(170,202,28,.35);
+}
+.btn-pay:hover{ filter: brightness(.95); transform: translateY(-1px); }
+.btn-pay:disabled{ opacity:.6; cursor:not-allowed; transform:none; }
+
+/* resumo */
+.resumo-actions{
+  display:flex;
+  justify-content:flex-start;
+  margin-top: 2px;
+}
+
+.btn-clear{
+  border: 1px solid rgba(231,76,60,.55) !important;
+  background: rgba(231,76,60,.08) !important;
+  color: var(--red) !important;
+  padding: 6px 10px !important;
+  border-radius: 10px !important;
+  font-weight: 900 !important;
+  font-size: 12px !important;
+  transition: all .15s ease-out;
+}
+.btn-clear:hover{ background: rgba(231,76,60,.14) !important; transform: translateY(-1px); }
+
+#resumoItens{ margin:0; padding:0; }
+
+.resumo-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px;
+  margin-bottom:10px;
+  border-radius:12px;
+  background: rgba(0,0,0,.30);
+  border: 1px solid rgba(255,255,255,.07);
+}
+
+.resumo-img{
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  object-fit: cover;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+  flex: 0 0 auto;
+}
+
+.resumo-mid{ flex:1; min-width:0; }
+
+.resumo-nome{
+  font-weight:900;
+  color: var(--white);
+  line-height:1.1;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.resumo-qtd{
+  font-size:12px;
+  color: rgba(251,251,250,.68);
+  margin-top: 2px;
+}
+
+.resumo-preco{
+  font-weight:900;
+  color: var(--lime);
+  white-space:nowrap;
+  min-width: 90px;
+  text-align:right;
+}
+
+/* remove */
+.btn-remove{
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: 1px solid rgba(231,76,60,.55) !important;
+  background: transparent !important;
+  color: var(--red) !important;
+  font-weight: 900;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition: all .15s ease-out;
+}
+.btn-remove:hover{
+  background: rgba(231,76,60,.12) !important;
+  transform: translateY(-1px);
+}
+
+/* totals */
+.total-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  margin-top:12px;
+  padding-top:12px;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+.total-label{
+  font-size:18px;
+  font-weight:900;
+  color: var(--white);
+}
+.total-value{
+  font-size:18px;
+  font-weight:900;
+  color: var(--lime);
+}
+
+.total-row-mini{
+  margin-top:10px;
+  padding-top:10px;
+}
+.total-label-mini{
+  font-size:14px;
+  font-weight:700;
+  color: rgba(251,251,250,.80);
+}
+.total-value-mini{
+  font-size:14px;
+  font-weight:800;
+  color: rgba(251,251,250,.80);
+}
+
+.total-row-final{ margin-top: 14px; }
+
+/* responsive */
+@media (max-width: 900px){
+  .checkout-grid{ grid-template-columns: 1fr; }
+  .checkout-topbar-inner{ padding: 0 16px; }
+  .buyer-grid{ grid-template-columns: 1fr; }
+}
+
+/* =========================
+   PATCH UI (cola no fim)
+========================= */
+
+/* 1) Headers: mesma altura + alinhamento (pagamento/resumo) */
+.card-head{
+  min-height: 64px !important;
+  padding: 16px 20px !important;
+  display: flex !important;
+  align-items: center !important;      /* era flex-start */
+  justify-content: space-between !important;
+}
+
+/* título do header com tipografia consistente */
+.card-title{
+  font-size: 16px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+/* botão limpar carrinho não pode “esticar” o header */
+.card-head .btn-clear{
+  height: 29px !important;
+  padding: 0 12px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+}
+
+/* 2) Botão voltar ao marketplace: fonte e centragem */
+.btn-ghost{
+  height: 40px !important;
+  padding: 0 16px !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* 3) Títulos “Cartão” e “Código promocional”: igual ao resto */
+.card-body > label,
+.card-body .form-label,
+.buyer-box > label,
+.buyer-box .form-label{
+  font-size: 14px !important;
+  font-weight: 900 !important;
+  color: #FBFBFA !important;
+  letter-spacing: .2px !important;
+  margin-bottom: 10px !important;
+}
+
+/* labels pequenas (Nome/Email/NIF/Telefone): mantém consistência */
+.buyer-field label{
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  color: rgba(251,251,250,.78) !important;
+}
+
+/* 4) Fundo do bloco do cartão: não pode ser mais preto que o resto */
+.payment-box{
+  background: rgba(0, 0, 0, .25) !important; /* igual ao look geral */
+  border: 1px solid rgba(255,255,255,.08) !important;
+}
+
+/* se tiveres outro wrapper do cartão, garante que também não fica preto */
+#card-container{
+  background: transparent !important;
+}
+
+/* 5) Opcional: se ainda vires “buraco” no Square */
+#card-container{
+  min-height: 65px !important;
+}
+#card-container iframe{
+  height: 55px !important;
+}
+
+.buyer-title{
+  font-size: 13px !important;
+  font-weight: 900 !important;
+  color: rgba(251,251,250,.92) !important;
+  letter-spacing: .2px !important;
+}
+

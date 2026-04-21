@@ -1,0 +1,162 @@
+/* ---------- Ingredientes (sem "bolhas") ---------- */
+#ingredientesLista .ingrediente-item{
+  margin-top: 10px;
+}
+
+#ingredientesLista .ingrediente-item:first-child{
+  margin-top: 0;
+}
+
+/* linha separadora suave entre ingredientes */
+#ingredientesLista .ingrediente-item + .ingrediente-item{
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+/* inputs alinhados e consistentes */
+#ingredientesLista .ingrediente-item .form-control{
+  height: 42px !important;
+  border-radius: 12px !important;
+}
+
+/* focus menos agressivo só nos ingredientes (mantém o theme) */
+#ingredientesLista .ingrediente-item .form-control:focus{
+  border-color: rgba(170,202,28,0.55) !important;
+  box-shadow: 0 0 0 0.12rem rgba(170,202,28,0.10) !important;
+}
+
+/* botão remover alinhado com inputs */
+#ingredientesLista .ingrediente-item .btnRemoverIng{
+  height: 42px !important;
+  border-radius: 12px !important;
+  padding: 0 !important;
+}
+
+/* ---------- Listas (Os meus planos / Nutricionista) ---------- */
+#listaPlanos .list-group,
+#listaFicheirosNutricionista .list-group{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#listaPlanos .list-group-item,
+#listaFicheirosNutricionista .list-group-item{
+  border: 1px solid rgba(255,255,255,.10) !important;
+  background: rgba(0,0,0,.12) !important;
+  border-radius: 14px !important;
+  padding: 14px 16px !important;
+  margin: 0 !important;
+  transition: background .15s ease, border-color .15s ease;
+}
+
+
+#listaPlanos .fw-semibold,
+#listaFicheirosNutricionista .fw-semibold{
+  font-weight: 800 !important;
+}
+
+#listaPlanos small.text-muted,
+#listaFicheirosNutricionista small.text-muted{
+  color: rgba(255,255,255,.65) !important;
+  font-size: .82rem !important;
+}
+
+/* empty-state coerente */
+#listaPlanos > p.text-muted,
+#listaFicheirosNutricionista > p.text-muted{
+  border: 1px dashed rgba(255,255,255,.18);
+  background: rgba(255,255,255,.03);
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin: 0;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Action buttons (igual ao treino, mas local) ---------- */
+.pt-action-btn{
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: transparent !important;
+  border: 1.5px solid rgba(255,255,255,.18);
+  color: #FBFBFA !important;
+  transition: all .15s ease;
+}
+
+.pt-action-btn:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 3px rgba(255,255,255,.04);
+}
+
+.pt-action-btn--green{ border-color: rgba(40,200,120,.85); color: rgba(40,200,120,.95) !important; }
+.pt-action-btn--green:hover{ background: rgba(40,200,120,.10) !important; }
+
+.pt-action-btn--red{ border-color: rgba(255,60,60,.85); color: rgba(255,60,60,.95) !important; }
+.pt-action-btn--red:hover{ background: rgba(255,60,60,.10) !important; }
+
+.pt-action-btn--blue{
+  border-color: rgba(80,140,255,.85);
+  color: rgba(80,140,255,.95) !important;
+}
+
+.pt-action-btn--blue:hover{
+  background: rgba(80,140,255,.12) !important;
+}
+
+/* Backdrop atrás do modal */
+.modal-backdrop{
+  z-index: 2000 !important;
+}
+
+/* Modal acima do backdrop */
+.modal{
+  z-index: 2005 !important;
+  
+}
+
+/* Limpar deve ser secundário (não brand) */
+#btnLimparPlano.btn-outline-secondary{
+  border-color: rgba(255,255,255,.18) !important;
+  color: rgba(255,255,255,.80) !important;
+  background: transparent !important;
+}
+
+#btnLimparPlano.btn-outline-secondary:hover{
+  background: rgba(255,255,255,.06) !important;
+  border-color: rgba(255,255,255,.28) !important;
+}
+
+:root{
+  --pt-text: #ced4da !important;
+  --pt-text-muted: rgba(251,251,250,.65) !important;
+}
+
+.pt-card-lg .card-header h5,
+.pt-card-lg .card-header h6{
+  color: var(--pt-text) !important;
+  font-weight: 700 !important;
+}
+
+/* Corrigir padding e alinhamento só no modal do ficheiro */
+#modalVerFicheiroNutri .modal-footer .btn{
+  padding: 0 14px !important;   /* menos largo = alinha visualmente */
+  height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+}
+
+/* garante que ficam juntos à direita */
+#modalVerFicheiroNutri .modal-footer{
+  justify-content: flex-end !important;
+  gap: 10px !important;
+}
+

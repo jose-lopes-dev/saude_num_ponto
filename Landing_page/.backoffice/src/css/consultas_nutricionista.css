@@ -1,0 +1,34 @@
+.cl-card{
+  background-color: var(--pt-card-bg) !important;
+  border: 1px solid var(--pt-border) !important;
+  border-radius: var(--pt-radius) !important;
+  padding: 26px 24px !important;
+  min-height: 120px !important;
+  box-shadow: var(--pt-shadow) !important;
+  transition: all .18s ease-out !important;
+}
+
+.cl-card:hover{
+  background-color: #323334 !important;
+  border-color: var(--pt-border-strong) !important;
+  box-shadow: var(--pt-shadow-hover) !important;
+  transform: translateY(-2px) !important;
+}
+
+.cl-card-title{
+  font-size: .85rem !important;
+  color: var(--pt-text-muted) !important;
+  margin-bottom: 6px !important;
+  font-weight: 500 !important;
+}
+
+.cl-card-value{
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
+  color: var(--pt-text) !important;
+  margin-bottom: 4px !important;
+}
+
+.cl-card small{
+  opacity: .7 !important;
+}

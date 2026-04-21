@@ -1,0 +1,310 @@
+/* Botão Editar (Consultas) - igual ao azul da dashboard */
+#listagemConsultas .btn-primary,
+#tabelaConsultas .btn-primary,
+#consultasTable .btn-primary,
+.btn-editar-consulta {
+  background-color: #0d6efd !important;
+  border-color: #0d6efd !important;
+  color: #ffffff !important;
+}
+
+#listagemConsultas .btn-primary:hover,
+#tabelaConsultas .btn-primary:hover,
+#consultasTable .btn-primary:hover,
+.btn-editar-consulta:hover {
+  background-color: #0b5ed7 !important;
+  border-color: #0a58ca !important;
+  color: #ffffff !important;
+}
+
+.mini-calendar {
+    table-layout: fixed;
+    width: 100%;
+  }
+  .mini-calendar th,
+  .mini-calendar td {
+    padding: 10px 6px;          /* mais espaço vertical */
+    text-align: center;
+    vertical-align: middle;
+  }
+  /* Altura mínima por semana para não ficar esmagado */
+  .mini-calendar tr { height: 48px; }
+
+  /* Contadores/badges dentro do calendário  */
+  .mini-calendar .badge,
+  .mini-calendar .dot,
+  .mini-calendar .count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 1;
+  }
+
+  /* Linha separadora discreta entre semanas */
+  .mini-calendar tbody tr + tr td {
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .mini-calendar .dot {
+  box-shadow: 0 0 4px rgba(170,202,28,0.4);
+}
+
+.mini-calendar thead tr {
+  border-bottom: 2px solid rgba(255,255,255,0.1);
+}
+
+.extras-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px 10px;
+    background: #222;
+    border: 1px solid #333;
+    border-radius: 4px;
+    margin-top: 4px; 
+}
+
+.extra-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.extra-item input {
+    width: 18px;
+    height: 18px;
+    accent-color: #AACA1C;
+}
+
+/* Botão do select de extras */
+.btn-extras {
+    background-color: #FBFBFA;
+    border-color: #FBFBFA;
+    color: #1E2224;
+}
+
+/* Hover, focus, active, dropdown aberto */
+.btn-extras:hover,
+.btn-extras:focus,
+.btn-extras:active,
+.btn-extras.show,
+.btn-extras:active:focus {
+    background-color: #FBFBFA !important;
+    border-color: #FBFBFA !important;
+    color: #1E2224 !important;
+    box-shadow: none !important;
+}
+
+/* Caixa de seleção dentro do dropdown dos extras */
+.dropdown-extras .form-check-label {
+    color: #FBFBFA;
+    font-size: 0.9rem;
+}
+
+.dropdown-extras .form-check-input {
+    background-color: transparent;
+    border: 1px solid #FBFBFA;
+    width: 16px;
+    height: 16px;
+    margin-top: 0.15rem;
+}
+
+.dropdown-extras .form-check-input:checked {
+    background-color: #AACA1C;
+    border-color: #AACA1C;
+}
+
+.dropdown-extras .form-check-input:focus {
+    box-shadow: none;
+    border-color: #AACA1C;
+}
+
+.dropdown-extras {
+    border: 1px solid #FBFBFA !important;
+    background-color: #1E2224 !important;
+    border-radius: 4px;
+}
+
+.select2-container {
+    width: 100% !important;
+}
+
+.select2-container .select2-selection--single {
+    height: 38px !important;
+    background-color: #FBFBFA !important;
+    border: 1px solid #ced4da !important;
+    border-radius: 4px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* SELECT2 container ocupa sempre toda a largura */
+.select2-container {
+    width: 100% !important;
+}
+
+/* Caixa do SELECT2 */
+.select2-container--default .select2-selection--single {
+    background-color: #FBFBFA!important;
+    border: 1px solid #2A2A2A!important;
+    height: 38pxv!important;
+    border-radius: 4px!important;
+    display: flex!important;
+    align-items: center!important;
+}
+
+/* Texto dentro */
+.select2-selection__rendered {
+    color: #121313 !important;
+    padding-left: 10px !important;
+    line-height: 38px !important;
+}
+
+/* Seta do dropdown */
+.select2-selection__arrow {
+    height: 38px !important;
+}
+
+/* Campo de pesquisa */
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    background-color: #1E2224!important;
+    border: 1px solid #FBFBFA!important;
+    color: #FBFBFA !important;
+}
+
+/* Texto no dropdown */
+.select2-results__option {
+    background-color: #1E2224 !important;
+    color: #FBFBFA !important;
+}
+
+/* Hover das opções */
+.select2-results__option--highlighted {
+    background-color: #AACA1C !important;
+    color: #090A0B !important;
+}
+
+/* Fundo do dropdown */
+.select2-dropdown {
+    background-color: #1E2224 !important;
+    border: 1px solid #2A2A2A !important;
+}
+
+.extras-box {
+    border: 1px solid #ced4da!important;
+    border-radius: 8px!important;
+}
+
+/* Cabeçalho da tabela em branco, tipo "thead" que já tens */
+.extras-box thead th {
+    background-color: #FBFBFA!important;
+    color: #121313!important;
+    border-bottom: 1px solid #2A2A2A!important;
+}
+
+/* Linhas da tabela */
+.extras-box tbody tr td {
+    border-color: #2A2A2A!important;
+    color: #FBFBFA!important;
+    font-size: 0.9rem!important;
+}
+
+.select2-search--dropdown,
+.select2-search--dropdown {
+    background-color: #1E2224 !important;
+}
+
+.flatpickr-calendar {
+    background-color: #121313 !important;
+    border: 1px solid #2A2A2A !important;
+    color: #FBFBFA !important;
+    font-family: 'Rajdhani', 'Roboto', sans-serif;
+}
+
+.flatpickr-months {
+    background-color: #090A0B !important;
+    border-bottom: 1px solid #2A2A2A !important;
+}
+
+.flatpickr-current-month input.cur-year,
+.flatpickr-current-month .flatpickr-monthDropdown-months {
+    color: #FBFBFA !important;
+}
+
+.flatpickr-prev-month,
+.flatpickr-next-month {
+    color: #FBFBFA !important;
+}
+.flatpickr-prev-month:hover,
+.flatpickr-next-month:hover {
+    color: #AACA1C !important;
+}
+
+.flatpickr-weekday {
+    color: #BBBBBB !important;
+}
+
+.flatpickr-day {
+    background: transparent !important;
+    color: #FBFBFA !important;
+    border-radius: 4px !important;
+}
+
+.flatpickr-day.prevMonthDay,
+.flatpickr-day.nextMonthDay {
+    color: #555555 !important;
+    opacity: 0.5 !important;
+}
+
+.flatpickr-day:not(.prevMonthDay):not(.nextMonthDay):hover {
+    background-color: #AACA1C !important;
+    border-color: #AACA1C !important;
+}
+
+.flatpickr-day.today:not(.selected) {
+    border: 1px solid #AACA1C !important;
+    background: transparent !important;
+    color: #FBFBFA !important;
+}
+
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange,
+.flatpickr-day.selected:focus {
+    background-color: #AACA1C !important;
+    border-color: #AACA1C !important;
+    color: #090A0B !important;
+}
+
+.flatpickr-day:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.flatpickr-prev-month,
+.flatpickr-next-month {
+    color: #FBFBFA !important;    
+}
+
+.flatpickr-prev-month svg,
+.flatpickr-next-month svg {
+    fill: #FBFBFA !important;      
+}
+
+.flatpickr-prev-month:hover svg,
+.flatpickr-next-month:hover svg {
+    fill: #AACA1C !important;
+}
+
+.flatpickr-prev-month,
+.flatpickr-next-month {
+    background: transparent !important;
+}
+

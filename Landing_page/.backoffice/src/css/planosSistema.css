@@ -1,0 +1,261 @@
+/* Keep SweetAlert from messing with body height (you already had this) */
+html.swal2-height-auto,
+body.swal2-height-auto{
+  height: 100% !important;
+}
+
+/* ===========================
+   Planos do Sistema (Cliente)
+   =========================== */
+
+/* Header/section spacing */
+.planos-sistema-page .page-title-box{
+  padding-bottom: 6px !important;
+  border-bottom: 1px solid rgba(255,255,255,.10) !important;
+}
+
+.planos-sistema-page #planoAtualInfo{
+  font-size: .9rem !important;
+  color: rgba(255,255,255,.85) !important;
+  margin-top: 6px !important;
+}
+
+/* Cards grid: make them all same height + nicer spacing */
+.planos-sistema-page #zonaPlanos .card.pt-card-lg{
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 0 !important; /* global already sets padding in body/header, we keep the default card padding structure */
+}
+
+/* Card body typography */
+.planos-sistema-page #zonaPlanos .card.pt-card-lg .card-body{
+  flex: 1 1 auto !important;
+}
+
+.planos-sistema-page #zonaPlanos .card.pt-card-lg .card-title{
+  font-weight: 700 !important;
+  color: #FBFBFA !important;
+  margin-bottom: 10px !important;
+}
+
+.planos-sistema-page #zonaPlanos .card.pt-card-lg h3{
+  font-weight: 800 !important;
+  letter-spacing: .2px !important;
+  margin-bottom: 0 !important;
+}
+
+.planos-sistema-page #zonaPlanos .card.pt-card-lg h3 small{
+  font-weight: 600 !important;
+  opacity: .75 !important;
+}
+
+/* Features list */
+.planos-sistema-page #zonaPlanos ul{
+  margin: 14px 0 0 !important;
+  padding-left: 18px !important;
+}
+
+.planos-sistema-page #zonaPlanos li{
+  color: rgba(251,251,250,.85) !important;
+  margin: 8px 0 !important;
+}
+
+/* Badge */
+.planos-sistema-page #zonaPlanos .badge{
+  font-weight: 700 !important;
+  border-radius: 999px !important;
+  padding: .28rem .6rem !important;
+}
+
+/* Footer: keep button glued to bottom */
+.planos-sistema-page #zonaPlanos .card-footer{
+  background: transparent !important;
+  border: 0 !important;
+  padding: 16px 20px 20px !important;
+}
+
+/* Buttons: align to your global components */
+.planos-sistema-page .pt-btn-outline,
+.planos-sistema-page .pt-btn{
+  width: 100% !important;
+}
+
+/* Disabled/active plan button look */
+.planos-sistema-page .btnComprarPlano:disabled,
+.planos-sistema-page .btnComprarPlano[disabled]{
+  opacity: 1 !important;
+  cursor: default !important;
+  background: transparent !important;
+  border: 1px solid rgba(255,255,255,.18) !important;
+  color: rgba(255,255,255,.55) !important;
+  box-shadow: none !important;
+  filter: none !important;
+  letter-spacing: .8px !important;
+}
+
+/* "FREE" highlight like screenshot */
+.planos-sistema-page .text-success{
+  color: #AACA1C !important; /* lime, not 'success green' */
+}
+
+/* Make the middle plan feel featured (subtle) */
+.planos-sistema-page #zonaPlanos .col-md-4:nth-child(2) .pt-card-lg{
+  border-color: rgba(170,202,28,.22) !important;
+  box-shadow: 0 16px 30px rgba(0,0,0,.45) !important;
+}
+
+/* Modal: Square container spacing */
+.planos-sistema-page #card-container{
+  padding: 12px 12px 2px !important;
+  border: 1px solid rgba(255,255,255,.10) !important;
+  border-radius: 12px !important;
+  background: rgba(0,0,0,.18) !important;
+}
+
+.planos-sistema-page #card-errors{
+  font-size: .85rem !important;
+}
+
+/* Small screen: keep cards readable */
+@media (max-width: 991px){
+  .planos-sistema-page .topbar-search{
+    width: 100% !important;
+    max-width: 520px !important;
+  }
+}
+
+/* ===== Planos: botões mais gordinhos e consistentes ===== */
+.planos-sistema-page .btnComprarPlano{
+  width: 100% !important;
+  height: 50px !important;
+  min-height: 50px !important;
+  padding: 0 18px !important;
+  border-radius: 12px !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  letter-spacing: .02em !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Outline mais visível (o teu global deixa isto magro) */
+.planos-sistema-page .btnComprarPlano.pt-btn-outline{
+  border: 1px solid rgba(170,202,28,0.85) !important;
+}
+
+/* Hover do outline */
+.planos-sistema-page .btnComprarPlano.pt-btn-outline:hover{
+  background: rgba(170,202,28,0.18) !important;
+  color: #FBFBFA !important;
+}
+
+/* ===== ATIVO: mais forte, nada de cinzento fraquinho ===== */
+.planos-sistema-page .btnComprarPlano:disabled{
+    opacity: 1 !important;
+    background: #AACA1C !important;
+    color: #090A0B !important;
+    border: none !important;
+    cursor: not-allowed !important;
+    filter: brightness(0.95) !important;
+}
+
+/* ===== Header da página (linha + espaçamento) ===== */
+.planos-sistema-page .page-title-box{
+  padding-bottom: 14px !important;
+  margin-bottom: 16px !important;
+  border-bottom: 1px solid rgba(255,255,255,.10) !important;
+}
+
+/* ===== “Plano Atual …” com aspeto de card e não texto perdido ===== */
+.planos-sistema-page #planoAtualInfo{
+  margin: 12px 0 18px 0 !important;
+  padding: 12px 14px !important;
+  border-radius: 12px !important;
+  background: rgba(255,255,255,.04) !important;
+  border: 1px solid rgba(255,255,255,.12) !important;
+  color: rgba(251,251,250,.92) !important;
+  max-width: 720px !important;   /* fica arrumado, não estica a página toda */
+}
+
+/* Se o JS meter “Grátis este mês …” em linha separada, dá-lhe ar */
+.planos-sistema-page #planoAtualInfo small,
+.planos-sistema-page #planoAtualInfo .text-muted{
+  color: rgba(255,255,255,.65) !important;
+}
+
+/* ===== Badge Popular (pequeno e lime) ===== */
+.badge-popular{
+  display: inline-block !important;
+  background: #AACA1C !important;
+  color: #090A0B !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  padding: 3px 10px !important;
+  border-radius: 999px !important;
+  margin-right: 8px !important;
+  position: relative;
+  top: -1px;
+}
+
+/* ===== Topo numa linha: título à esquerda, plano atual à direita ===== */
+.planos-top-row{
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+  margin: 10px 0 18px 0 !important;
+}
+
+.planos-top-left{
+  flex: 1 1 auto !important;
+  min-width: 320px !important;
+}
+
+.planos-title{
+  margin: 0 0 6px 0 !important;
+}
+
+.planos-subtitle{
+  margin: 0 !important;
+  color: rgba(255,255,255,.70) !important;
+}
+
+/* Plano Atual “card” alinhado à direita */
+.planos-top-row #planoAtualInfo{
+  flex: 0 0 auto !important;
+  margin: 0 !important;
+  padding: 10px 14px !important;
+  border-radius: 12px !important;
+  background: rgba(255,255,255,.035) !important;
+  border: 1px solid rgba(255,255,255,.10) !important;
+  color: rgba(251,251,250,.92) !important;
+  max-width: 520px !important;
+  text-align: left !important;
+}
+
+/* Responsive: em ecrãs pequenos, volta a stack */
+@media (max-width: 992px){
+  .planos-top-row{
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .planos-top-row #planoAtualInfo{
+    max-width: 100% !important;
+  }
+}
+
+/* ===== Centralizar os cards dos planos ===== */
+.planos-sistema-page .planos-cards{
+  display: flex !important;
+  justify-content: center !important; /* centra o grupo */
+  gap: 22px !important;
+}
+
+/* Cada card com largura fixa decente */
+.planos-sistema-page .plano-card{
+  width: 360px !important;
+  max-width: 360px !important;
+}
+

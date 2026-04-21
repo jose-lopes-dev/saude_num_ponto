@@ -1,0 +1,353 @@
+:root{
+  --snp-lime: #AACA1C;
+  --snp-radius: 18px;
+}
+
+/* ===========================
+   SEARCH
+   =========================== */
+#searchAulas.form-control{
+  height: 44px;
+  border-radius: 999px;
+  padding: 0 16px;
+  background: rgba(18,19,19,.75);
+  border: 1px solid var(--snp-border);
+  color: var(--snp-text);
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+}
+
+#searchAulas.form-control::placeholder{
+  color: rgba(251,251,250,.45);
+}
+
+#searchAulas.form-control:focus{
+  background: rgba(9,10,11,.78);
+  border-color: rgba(170,202,28,.55);
+  box-shadow: 0 0 0 4px rgba(170,202,28,.12), 0 10px 24px rgba(0,0,0,.35);
+  outline: none;
+}
+
+/* Dá “ar” aos cards dentro da row */
+#listaAulas{
+  row-gap: 18px;
+}
+
+/* ===========================
+   IMAGEM (TOP)
+   =========================== */
+.aula-card .card-img-top{
+  position: relative;
+  height: 190px;               /* ajusta se quiseres mais alto */
+  object-fit: cover;
+  width: 100%;
+  display: block;
+}
+
+/* overlay para legibilidade */
+.aula-card .card-img-top::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,.05) 0%,
+    rgba(0,0,0,.55) 100%
+  );
+  pointer-events: none;
+}
+
+.aula-card .img-wrapper{
+  position: relative;
+}
+.aula-card .img-wrapper img{
+  height: 190px;
+  object-fit: cover;
+  width: 100%;
+  display: block;
+}
+.aula-card .img-wrapper::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,.05) 0%,
+    rgba(0,0,0,.55) 100%
+  );
+  pointer-events: none;
+}
+
+/* ===========================
+   BODY
+   =========================== */
+.aula-card .card-body{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.aula-card .card-title{
+  color: var(--snp-text);
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: .2px;
+}
+
+/* badge “nivel” */
+.aula-card .badge{
+  width: fit-content;
+  font-size: .72rem;
+  padding: .42em .72em;
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+/* Dá um look melhor às badges comuns */
+.badge.bg-success{ background: rgba(46, 204, 113, .18) !important; color: #bff0cf !important; }
+.badge.bg-warning{ background: rgba(244, 197, 66, .18) !important; color: #ffe1a0 !important; }
+.badge.bg-danger { background: rgba(231, 76, 60, .18) !important; color: #ffb3aa !important; }
+
+/* “Últimas vagas” a pulsar (se usares bg-danger) */
+.badge.bg-danger{
+  animation: pulse 1.2s infinite;
+}
+@keyframes pulse{
+  0%{ transform: scale(1); }
+  50%{ transform: scale(1.05); }
+  100%{ transform: scale(1); }
+}
+
+/* textos informativos */
+.aula-card p,
+.aula-card .card-text{
+  color: var(--snp-muted);
+  font-size: .88rem;
+  margin: 0;
+}
+
+/* Linhas tipo “data / participantes” com ícones */
+.aula-info{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--snp-muted);
+  font-size: .90rem;
+}
+
+.aula-info i{
+  color: rgba(251,251,250,.55);
+  font-size: 1.05rem;
+}
+
+/* ===========================
+   AÇÕES / BOTÕES
+   =========================== */
+.aula-card .d-grid{
+  margin-top: 6px;
+  gap: 10px;
+}
+
+.aula-card .btn{
+  border-radius: 14px;
+  font-weight: 800;
+  height: 44px;
+}
+
+/* Entrar na aula (normalmente btn-success) -> lime brand */
+.aula-card .btn-success{
+  background: var(--snp-lime) !important;
+  border: 1px solid rgba(251,251,250,.10) !important;
+  color: #090A0B !important;
+}
+
+.aula-card .btn-success:hover{
+  filter: brightness(1.05);
+  box-shadow: 0 0 0 .16rem rgba(170,202,28,.18) !important;
+}
+
+/* Botão “Aula lotada” (se usares btn-primary/btn-secondary) */
+.aula-card .btn[disabled],
+.aula-card .btn.disabled{
+  opacity: .75 !important;
+  cursor: not-allowed !important;
+}
+
+/* Detalhes (outline) mais clean no dark */
+.aula-card .btn-outline-secondary,
+.aula-card .btn-outline-primary{
+  background: transparent !important;
+  border-width: 1px !important;
+  height: 40px;
+  opacity: .95;
+}
+
+.aula-card .btn-outline-secondary{
+  border-color: rgba(251,251,250,.18) !important;
+  color: rgba(251,251,250,.85) !important;
+}
+.aula-card .btn-outline-secondary:hover{
+  border-color: rgba(170,202,28,.75) !important;
+  color: var(--snp-lime) !important;
+  background: rgba(170,202,28,.08) !important;
+}
+
+/* ===========================
+   RESPONSIVO
+   =========================== */
+@media (max-width: 768px){
+  #searchAulas.form-control{
+    width: 100%;
+  }
+  .aula-card .card-img-top,
+  .aula-card .img-wrapper img{
+    height: 170px;
+  }
+}
+
+/* CARDS: usar variáveis globais PT */
+#listaAulas .aula-card{
+  background: var(--pt-card-bg) !important;
+  border: 1px solid var(--pt-border) !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  box-shadow: var(--pt-shadow) !important;
+  transition: all .18s ease-out !important;
+  cursor: pointer;
+}
+
+#listaAulas .aula-card:hover{
+  background: #323334 !important;
+  border-color: var(--pt-border-strong) !important;
+  box-shadow: var(--pt-shadow-hover) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* imagem tipo “treinos” */
+#listaAulas .aula-card img.card-img-top{
+  height: 190px !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* corpo com spacing igual */
+#listaAulas .aula-card .card-body{
+  padding: 16px 16px 14px !important;
+  background: transparent !important;
+}
+
+#listaAulas .aula-card .card-title{
+  color: var(--pt-text) !important;
+  font-weight: 800 !important;
+  font-size: 1rem !important;
+  margin: 0 0 6px 0 !important;
+}
+
+#listaAulas .aula-card .card-text,
+#listaAulas .aula-card p{
+  color: var(--pt-text-muted) !important;
+  font-size: .86rem !important;
+}
+
+/* linha “Iniciante · 20 min” se tiveres assim */
+#listaAulas .aula-card .aula-info{
+  color: rgba(255,255,255,.75) !important;
+  font-size: .82rem !important;
+}
+#listaAulas .aula-card .aula-info i{
+  color: rgba(255,255,255,.55) !important;
+}
+
+/* botão estilo “Ver” (outline lime) */
+#listaAulas .aula-card .btn{
+  height: 34px !important;
+  padding: 0 14px !important;
+  border-radius: 999px !important;
+  font-weight: 800 !important;
+  font-size: .80rem !important;
+}
+
+/* Se o teu HTML usa btn-outline-secondary para Detalhes */
+#listaAulas .aula-card .btn-outline-secondary{
+  background: transparent !important;
+  border: 1px solid rgba(170,202,28,.65) !important;
+  color: #AACA1C !important;
+}
+
+#listaAulas .aula-card .btn-outline-secondary:hover{
+  background: rgba(170,202,28,.15) !important;
+  color: #FBFBFA !important;
+}
+
+/* Se tens botão verde “Entrar na aula”, mantém lime brand */
+#listaAulas .aula-card .btn-success{
+  background: #AACA1C !important;
+  border: 1px solid rgba(255,255,255,.12) !important;
+  color: #090A0B !important;
+}
+#listaAulas .aula-card .btn-success:hover{
+  filter: brightness(1.05) !important;
+  box-shadow: 0 0 0 .15rem rgba(170,202,28,.18) !important;
+}
+
+/* lotada: como no teu mock */
+#listaAulas .aula-card.lotada{
+  opacity: .70 !important;
+  filter: grayscale(55%) !important;
+}
+
+/* Centrar modal sem estragar a animação do Bootstrap */
+.modal-dialog{
+  margin: 0 auto;
+}
+
+.modal-dialog.modal-dialog-centered{
+  min-height: calc(100% - 1rem);
+  display: flex;
+  align-items: center;
+}
+
+/* se não estiveres a usar a class modal-dialog-centered no HTML */
+.modal.show .modal-dialog{
+  transform: none !important;
+}
+
+/* Botão Entrar na aula - centrar texto perfeito */
+.aula-card .btn-success{
+  display: flex !important;
+  align-items: center !important;     /* vertical */
+  justify-content: center !important; /* horizontal */
+  text-align: center !important;
+
+  padding: 0 18px !important;         /* remove padding vertical desigual */
+  height: 46px !important;
+  line-height: 1 !important;
+}
+
+.aula-card .btn-inscrever{
+  background: #3B82F6 !important;
+  border: 1px solid rgba(255,255,255,.12) !important;
+  color: #FBFBFA !important;
+}
+
+.aula-card .btn-inscrever:hover,
+.aula-card .btn-inscrever:focus{
+  background: #2F73E8 !important; /* um tom abaixo para feedback */
+  border-color: rgba(255,255,255,.18) !important;
+  box-shadow: 0 0 0 .15rem rgba(59,130,246,.22) !important;
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.aula-card .btn-inscrever:active{
+  transform: translateY(0);
+}
+
+/* Lotada (estado bloqueado real, não azul clicável) */
+.aula-card .btn-lotada{
+  background: rgba(120,130,140,.45);
+  color: rgba(255,255,255,.75);
+  border: 1px solid rgba(255,255,255,.08);
+  cursor: not-allowed;
+}

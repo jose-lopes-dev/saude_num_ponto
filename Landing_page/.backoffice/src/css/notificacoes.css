@@ -1,0 +1,334 @@
+/* =========================
+   NOTIFICAÇÕES (TOPBAR)
+   ========================= */
+
+/* Variáveis (ajusta se tiveres outras no projeto) */
+:root{
+  --app-bg: #121313;         /* fundo principal */
+  --app-bg-2: #090A0B;       /* fundo mais escuro */
+  --app-card: #1a1c1d;       /* cartões/dropdowns */
+  --app-border: rgba(255,255,255,.08);
+  --app-text: rgba(255,255,255,.88);
+  --app-muted: rgba(255,255,255,.60);
+  --app-accent: #AACA1C;     /* verde/lima */
+  --app-danger: #dc3545;     /* bootstrap-ish */
+  --app-shadow: 0 18px 40px rgba(0,0,0,.55);
+}
+
+/* Botão do sino */
+#notificationDropdown .btn-topbar{
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--app-text);
+  transition: transform .12s ease, background .12s ease, border-color .12s ease;
+}
+
+#notificationDropdown .btn-topbar:hover{
+  background: rgba(255,255,255,.06);
+  border-color: rgba(255,255,255,.10);
+  transform: translateY(-1px);
+}
+
+#notificationDropdown .btn-topbar:focus{
+  box-shadow: 0 0 0 .2rem rgba(170,202,28,.18);
+}
+
+/* Ícone */
+#notificationDropdown .bx-bell{
+  color: rgba(255,255,255,.85);
+}
+
+/* Badge (contador) */
+#notification-count{
+  min-width: 18px;
+  height: 18px;
+  padding: 0 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  line-height: 1;
+  border: 2px solid var(--app-bg);
+  box-shadow: 0 8px 18px rgba(0,0,0,.35);
+}
+
+/* Dropdown container */
+#notificationDropdown .dropdown-menu.dropdown-menu-lg{
+  width: 360px;
+  max-width: calc(100vw - 24px);
+  background: var(--app-card);
+  border: 1px solid var(--app-border);
+  box-shadow: var(--app-shadow);
+  border-radius: 14px;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* Header do dropdown */
+#notificationDropdown .dropdown-head{
+  background: linear-gradient(90deg, rgba(170,202,28,.18), rgba(170,202,28,.08));
+  border-bottom: 1px solid rgba(170,202,28,.18);
+}
+
+#notificationDropdown .dropdown-head h6{
+  letter-spacing: .2px;
+  color: #FBFBFA !important;
+}
+
+/* Conteúdo scroll */
+#notificationDropdown [data-simplebar]{
+  padding-right: 8px;
+}
+
+#notificationDropdown .py-2.ps-2{
+  padding: 10px 10px 10px 12px !important;
+}
+
+/* Lista (onde o JS injecta) */
+#notification-list{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 4px 6px 8px 0;
+}
+
+/* =========================
+   ITENS DE NOTIFICAÇÃO
+   (Classes que o teu JS pode/DEVE usar)
+   ========================= */
+
+/* Cada item */
+.notification-item{
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: background .12s ease, border-color .12s ease, transform .12s ease;
+}
+
+.notification-item:hover{
+  background: rgba(255,255,255,.06);
+  border-color: rgba(170,202,28,.22);
+  transform: translateY(-1px);
+}
+
+/* Item não lido (destaque discreto) */
+.notification-item.unread{
+  border-color: rgba(170,202,28,.28);
+  background: rgba(170,202,28,.06);
+}
+
+/* Topo do item: título + data */
+.notification-item .notification-title{
+  font-weight: 700;
+  color: var(--app-text);
+  font-size: 13px;
+  margin: 0 0 4px 0;
+}
+
+.notification-item .notification-time{
+  font-size: 11px;
+  color: var(--app-muted);
+  margin: 0 0 6px 0;
+}
+
+/* Texto/descrição */
+.notification-item .notification-text{
+  font-size: 12px;
+  color: rgba(255,255,255,.72);
+  margin: 0;
+  line-height: 1.35;
+}
+
+/* Separador (se o teu JS meter hr) */
+#notificationDropdown .dropdown-menu hr,
+#notificationDropdown .notification-sep{
+  border: 0;
+  border-top: 1px solid rgba(255,255,255,.08);
+  margin: 10px 0 0 0;
+}
+
+/* Footer / botão limpar */
+#notificationDropdown .border-top{
+  border-top: 1px solid rgba(255,255,255,.08) !important;
+  background: rgba(0,0,0,.10);
+}
+
+#btn-clear-notifications.btn.btn-soft-danger{
+  background: rgba(220,53,69,.10);
+  border: 1px solid rgba(220,53,69,.25);
+  color: rgba(255,255,255,.88);
+  border-radius: 12px;
+  font-weight: 700;
+  padding: 10px 12px;
+  transition: background .12s ease, transform .12s ease, border-color .12s ease;
+}
+
+#btn-clear-notifications.btn.btn-soft-danger:hover{
+  background: rgba(220,53,69,.16);
+  border-color: rgba(220,53,69,.35);
+  transform: translateY(-1px);
+}
+
+/* Pequeno detalhe: caret do dropdown (opcional) */
+#notificationDropdown .dropdown-menu.dropdown-menu-lg::before{
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: 18px;
+  width: 14px;
+  height: 14px;
+  background: var(--app-card);
+  border-left: 1px solid var(--app-border);
+  border-top: 1px solid var(--app-border);
+  transform: rotate(45deg);
+}
+
+/* Mobile: encosta melhor */
+@media (max-width: 480px){
+  #notificationDropdown .dropdown-menu.dropdown-menu-lg{
+    width: 100%;
+    right: 0;
+    left: 0;
+    margin: 0 12px;
+  }
+}
+
+/* ===== PATCH FINO (para ficar "site-like") ===== */
+
+/* Dropdown: tamanho + posicionamento + borda */
+#notificationDropdown .dropdown-menu.dropdown-menu-lg{
+  width: 340px;
+  border-radius: 16px;
+  transform: translateY(8px); /* dá ar mais natural a abrir */
+}
+
+/* Header: menos "verde chapado", mais premium */
+#notificationDropdown .dropdown-head{
+  background: linear-gradient(90deg, rgba(170,202,28,.95), rgba(170,202,28,.70));
+  border-bottom: 1px solid rgba(0,0,0,.25);
+}
+
+#notificationDropdown .dropdown-head .p-3{
+  padding: 14px 16px !important;
+}
+
+#notificationDropdown .dropdown-head h6{
+  font-size: 15px;
+  letter-spacing: .3px;
+}
+
+/* Seta/caret: mais pequena e discreta */
+#notificationDropdown .dropdown-menu.dropdown-menu-lg::before{
+  top: -6px;
+  right: 22px;
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(90deg, rgba(170,202,28,.95), rgba(170,202,28,.70));
+  border-left: 1px solid rgba(0,0,0,.20);
+  border-top: 1px solid rgba(0,0,0,.20);
+  box-shadow: -6px -6px 14px rgba(0,0,0,.15);
+}
+
+/* Área scroll: um pouco mais limpa */
+#notificationDropdown .py-2.ps-2{
+  padding: 10px 12px 6px 12px !important;
+}
+
+#notification-list{
+  gap: 12px;
+  padding: 6px 4px 10px 0;
+}
+
+/* Itens: mais "card" e menos bloco */
+.notification-item{
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.035);
+  border: 1px solid rgba(255,255,255,.07);
+}
+
+.notification-item:hover{
+  background: rgba(255,255,255,.055);
+  border-color: rgba(170,202,28,.25);
+}
+
+/* Hierarquia: data mais pequena, título mais forte, texto mais legível */
+.notification-item .notification-time{
+  font-size: 10.5px;
+  opacity: .75;
+  margin-bottom: 6px;
+}
+
+.notification-item .notification-title{
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.notification-item .notification-text{
+  font-size: 12px;
+  opacity: .85;
+}
+
+/* Se quiseres marcar "unread": glow discreto */
+.notification-item.unread{
+  background: rgba(170,202,28,.07);
+  border-color: rgba(170,202,28,.30);
+  box-shadow: 0 10px 24px rgba(170,202,28,.08);
+}
+
+/* Footer: menos pesado */
+#notificationDropdown .border-top{
+  background: rgba(0,0,0,.12);
+}
+
+#btn-clear-notifications{
+  border-radius: 14px !important;
+  padding: 11px 12px !important;
+}
+
+/* Botão sino: borda lime no hover (fica a combinar com o menu) */
+#notificationDropdown .btn-topbar:hover{
+  border-color: rgba(170,202,28,.22);
+  box-shadow: 0 0 0 .2rem rgba(170,202,28,.12);
+}
+
+.notification-empty{
+  padding: 22px 0;
+  text-align: center;
+  color: rgba(255,255,255,.65);
+  font-size: 13px;
+  font-style: italic;
+}
+
+#btn-clear-notifications{
+  opacity: .85;
+}
+
+#btn-clear-notifications:hover{
+  opacity: 1;
+}
+
+.notification-item.clickable { cursor: pointer !important; }
+.notification-item.clickable:hover { background: rgba(255,255,255,0.06) !important; }
+
+.notif-title {
+    font-weight: 600!important;
+    margin-bottom: 2px!important;
+}
+
+.notif-text {
+    font-size: 13px!important;
+    opacity: 0.85!important;
+}
+
+.notif-date {
+    font-size: 12px!important;
+    opacity: 0.55!important;
+    margin-top: 6px!important;
+}

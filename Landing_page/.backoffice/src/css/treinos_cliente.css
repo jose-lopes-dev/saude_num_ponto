@@ -1,0 +1,283 @@
+/* ------------------------------
+   GRID / LISTA
+------------------------------ */
+
+#listaTreinos.row{
+  --bs-gutter-x: 1.25rem;
+  --bs-gutter-y: 1.25rem;
+}
+
+#listaTreinos .col-md-4,
+#listaTreinos .col-lg-4,
+#listaTreinos .col-sm-6{
+  margin-bottom: 22px !important; /* mb entre cards */
+}
+
+/* ------------------------------
+   SEARCH
+------------------------------ */
+
+#searchTreinos.form-control{
+  height: 44px;
+  border-radius: 999px;
+  padding: 0 16px;
+  background: rgba(9,10,11,.55);
+  border: 1px solid rgba(251,251,250,.12);
+  color: #FBFBFA !important;
+}
+#searchTreinos.form-control::placeholder{
+  color: rgba(251,251,250,.45);
+}
+#searchTreinos.form-control:focus{
+  border-color: rgba(170,202,28,.75);
+  box-shadow: 0 0 0 4px rgba(170,202,28,.14);
+  background: rgba(9,10,11,.70);
+}
+
+/* ------------------------------
+   CARD (Treino)
+------------------------------ */
+
+#listaTreinos .treino-card{
+  background: #121313;
+  border: 1px solid rgba(251,251,250,.12);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0,0,0,.35);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  height: 100%;
+  position: relative;
+}
+
+/* Imagem maior */
+#listaTreinos .treino-card img{
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  filter: saturate(1.05) contrast(1.03);
+}
+
+/* Conteúdo */
+#listaTreinos .treino-card .card-body,
+#listaTreinos .treino-card .card-footer{
+  position: relative;
+  z-index: 2;
+  background: transparent;
+}
+
+#listaTreinos .treino-card .card-body{
+  padding: 14px 16px 6px; 
+}
+
+#listaTreinos .treino-card .card-title{
+  color: #FBFBFA;
+  font-weight: 800;
+  letter-spacing: .2px;
+  font-size: 0.98rem;
+  margin-bottom: 8px;
+  line-height: 1.25;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+#listaTreinos .treino-card .card-text{
+  color: rgba(251,251,250,.70);
+  font-size: .85rem;
+  line-height: 1.35;
+  margin-bottom: 10px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+#listaTreinos .treino-card small{
+  color: rgba(251,251,250,.65);
+  font-size: .78rem;
+}
+
+/* Footer com menos “espaço morto” */
+#listaTreinos .treino-card .card-footer{
+  border-top: 1px solid rgba(251,251,250,.08);
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Botão "Ver" */
+#listaTreinos .treino-card .btn-ver,
+#listaTreinos .treino-card .btn.btn-sm,
+#listaTreinos .treino-card .btn-success{
+  border-radius: 10px;
+  padding: 6px 12px;
+  font-weight: 800;
+  font-size: .78rem;
+  line-height: 1.1;
+  border: 1px solid rgba(170,202,28,.85) !important;
+  color: #AACA1C !important;
+  background: transparent !important;
+  margin: 0 !important;
+  transition: background .15s ease, color .15s ease, box-shadow .15s ease, transform .15s ease;
+}
+
+#listaTreinos .treino-card .btn-ver:hover,
+#listaTreinos .treino-card .btn.btn-sm:hover,
+#listaTreinos .treino-card .btn-success:hover{
+  background: rgba(170,202,28,.14) !important;
+  color: #FBFBFA !important;
+  box-shadow: 0 0 0 4px rgba(170,202,28,.12);
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   MODAL DETALHE (modalTreino)
+   - este é o modal do "Ver"
+   - NÃO mexe noutros modais
+   ========================================================= */
+
+#modalTreino .modal-dialog{
+  max-width: 760px;
+  margin: 1.75rem auto;
+}
+
+#modalTreino .modal-content{
+  background: #121313;
+  border: 1px solid rgba(251,251,250,.12);
+  border-radius: 16px;
+}
+
+#modalTreino .modal-body{
+  max-height: 75vh;
+  overflow-y: auto;
+}
+
+#modalTreino .modal-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(251,251,250,.08);
+}
+
+/* Caixa do vídeo no detalhe (resolve “vídeo em cima do texto”) */
+#modalTreino #modalVideoWrap{
+  width: 100%;
+  height: 320px;
+  margin: 10px 0 14px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+
+#modalTreino #modalVideoWrap iframe{
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  border: 0 !important;
+}
+
+/* Botões do detalhe */
+#modalTreino .btn{
+  border-radius: 10px;
+  font-weight: 800;
+}
+
+/* ====== Treinos cards a seguir o design system (pt-card) ====== */
+#listaTreinos .treino-card{
+  background-color: var(--pt-card-bg) !important;
+  border: 1px solid var(--pt-border) !important;
+  border-radius: var(--pt-radius) !important;
+  box-shadow: var(--pt-shadow) !important;
+}
+
+#listaTreinos .treino-card:hover{
+  background-color: #323334 !important; /* igual ao hover do pt-card */
+  border-color: var(--pt-border-strong) !important;
+  box-shadow: var(--pt-shadow-hover) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Mantém imagem com o mesmo raio em cima */
+#listaTreinos .treino-card img{
+  border-top-left-radius: var(--pt-radius) !important;
+  border-top-right-radius: var(--pt-radius) !important;
+}
+
+/* ====== FIX: modalWorkout tem de ser mesmo fullscreen ====== */
+#modalWorkout .modal-dialog{
+  max-width: 100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+}
+
+#modalWorkout .modal-content{
+  height: 100vh !important;
+  border-radius: 0 !important;
+}
+
+#modalWorkout .modal-body{
+  padding: 16px !important;
+}
+
+/* garante que a caixa do vídeo usa bem o ecrã */
+#modalWorkout #workVideoBox{
+  width: 100% !important;
+  max-width: 1100px;   /* opcional: não ficar gigante em ecrãs enormes */
+  margin: 0 auto;
+}
+
+/* ModalTreino: força o outline a ter o mesmo “corpo” do pt-btn */
+#modalTreino .pt-btn-outline{
+  height: 40px !important;
+  min-height: 40px !important;
+  padding: 6px 12px !important;
+  border-radius: 10px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+
+  font-size: 14px !important; /* antes era 12px no global */
+}
+
+/* Se quiseres mesmo iguais (largura) */
+#modalTreino #btnIniciarTreino,
+#modalTreino #btnGuardarTreino{
+  min-width: 140px;
+}
+
+#modalWorkout .pt-btn-outline{
+  height: 40px !important;
+  min-height: 40px !important;
+  border-radius: 10px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 6px 12px !important;
+  font-size: 14px !important;
+}
+
+#modalTreino .modal-footer{
+  margin-top: 6px;
+}
+
+#modalWorkout .modal-header{
+  border-bottom: 1px solid var(--pt-border);
+  padding: 10px 16px;
+}
+
+#modalWorkout #btnEndWorkout{
+  height: 36px;
+  padding: 4px 12px;
+  font-size: 13px;
+}
+

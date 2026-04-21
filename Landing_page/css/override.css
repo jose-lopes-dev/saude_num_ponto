@@ -1,0 +1,464 @@
+/* ===========================
+   SaúdeNumPonto — overrides
+   Paleta: #090A0B (Black), #121313 (Dark Gray), #AACA1C (Lime), #FBFBFA (White)
+   Coloca depois do css/style.css
+=========================== */
+
+:root{
+  --black:#090A0B;
+  --dark:#121313;
+  --lime:#AACA1C;
+  --white:#FBFBFA;
+  --muted:#C9C9C7;
+  --card:#111214;
+  --card-2:#0D0E10;
+  --shadow: 0 10px 30px rgba(0,0,0,.25);
+  --radius: 18px;
+}
+
+html { scroll-behavior: smooth; }
+body{
+  background: var(--black);
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Tipografia geral */
+h1,h2,h3,h4,h5{
+  letter-spacing:.2px;
+  color: var(--white);
+}
+p{ color: rgba(251,251,250,.85); }
+
+/* Utilitários */
+.bg-black-50{ background: rgba(9,10,11,.6)!important; }
+.bg-3, .bg-4{ position: relative; }
+.bg-3::before, .bg-4::before{
+  content:""; position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(9,10,11,.35), rgba(9,10,11,.75));
+}
+.text-color{ color: var(--lime)!important; }
+.text-white-50{ color: rgba(251,251,250,.6)!important; }
+.letter-spacing{ letter-spacing: .8px; }
+
+/* Navbar */
+#navbar{
+  background: rgba(9,10,11,.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+#navbar .nav-link{
+  color: rgba(251,251,250,.78)!important;
+  font-weight:600;
+  padding:.9rem 1rem;
+  transition: color .2s ease, transform .2s ease;
+}
+#navbar .nav-link:hover,
+#navbar .nav-item.active .nav-link{ color: var(--lime)!important; }
+#navbar .btn.btn-main{
+  background: var(--lime); color: var(--black);
+  border:0; border-radius: 999px; padding:.6rem 1.1rem;
+  box-shadow: 0 6px 14px rgba(170,202,28,.35);
+}
+#navbar .btn.btn-main:hover{ transform: translateY(-1px); }
+
+
+
+/* Cards genéricos (features, serviços, etc.) */
+.card{
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,.06)!important;
+  border-radius: var(--radius)!important;
+  box-shadow: var(--shadow);
+}
+.card.hover-style-1{ transition: transform .18s ease, box-shadow .18s ease; }
+.card.hover-style-1:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,.35);
+}
+.number{
+  position:absolute; top:14px; right:20px;
+  color: rgba(251,251,250,.08); font-size:42px; font-weight:900;
+}
+
+/* Secções “about” e imagens */
+.section.about img{
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+/* Testemunhos */
+.section.textimonial{
+  background-size: cover; background-position:center;
+}
+.section.textimonial .section-title h2{ color: var(--white); }
+.testimonial-slider .ti-quote-left{ color: var(--lime)!important; }
+.testimonial-slider h3{ color: var(--white); }
+.testimonial-slider .text-center{
+  background: rgba(17,18,20,.55);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius);
+  padding: 2rem;
+}
+
+/* Slick dots set dark/visible */
+.slick-dots li button:before{ color: var(--lime)!important; opacity:.45; }
+.slick-dots li.slick-active button:before{ opacity:1; }
+
+/* Botões */
+.btn-main{
+  background: var(--lime);
+  color: var(--black)!important;
+  border: 0; border-radius: 14px;
+  font-weight: 800;
+  box-shadow: 0 8px 18px rgba(170,202,28,.32);
+}
+.btn-main:hover{ filter: saturate(1.05) brightness(1.05); }
+.btn-solid-border{
+  border:1.5px solid var(--lime); color: var(--white)!important;
+  border-radius: 14px; font-weight:700;
+}
+.btn-solid-border:hover{ background: var(--lime); color: var(--black)!important; }
+
+/* Pricing */
+.section.pricing .card{
+  background: var(--card-2);
+}
+.section.pricing .card-title{ color: var(--white); }
+.section.pricing h3{
+  color: var(--white); font-weight:900;
+}
+.section.pricing .ti-check{ color: var(--lime)!important; }
+.section.pricing .ti-close{ color: rgba(251,251,250,.4); }
+.section.pricing .card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,.38);
+}
+
+/* Tabelas de preços destacadas (ex: “Popular”) */
+.section.pricing .card .text-sm.bg-dark,
+.section.pricing .card .text-sm.bg-primary{
+  background: var(--lime)!important; color: var(--black)!important;
+  border-radius: 6px;
+}
+
+/* Serviços (media list) */
+.media img{ border-radius: 12px; box-shadow: var(--shadow); }
+.media .letter-spacing.text-sm{ color: var(--muted); }
+.media h4{ color: var(--white); }
+
+/* Formulários (contacto) */
+.form-control, .form-group-2 textarea{
+  background: #0E0F12; color: var(--white);
+  border:1px solid rgba(255,255,255,.09);
+  border-radius: 12px; padding: .85rem 1rem;
+}
+.form-control:focus, .form-group-2 textarea:focus{
+  border-color: var(--lime);
+  box-shadow: 0 0 0 3px rgba(170,202,28,.15);
+  background: #0F1113; color: var(--white);
+}
+
+/* Footer */
+.footer{
+  background: #0A0B0D!important;
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+.footer h2, .footer h4{ color: var(--white); }
+.footer a{ color: rgba(251,251,250,.8); }
+.footer a:hover{ color: var(--lime); }
+.footer .bg-black{ background: #08090B!important; border-radius: 12px; }
+
+/* Pequenas correções de espaçamento */
+.section{ padding: 80px 0; }
+.mt-80px{ margin-top: 80px; }
+
+/* Responsivo */
+@media (max-width: 991px){
+  #navbar .nav-link{ padding:.7rem .8rem; }
+  .section{ padding: 64px 0; }
+  .slider{ min-height: 60vh; }
+}
+@media (max-width: 575px){
+  .card{ padding: 1.25rem!important; }
+  .testimonial-slider .text-center{ padding: 1.25rem; }
+}
+
+/* === Correção de cores & contraste (v2) === */
+:root{
+  --black:#090A0B;
+  --dark:#121313;
+  --card:#141516;
+  --lime:#AACA1C;
+  --white:#FBFBFA;
+  --text:rgba(251,251,250,.88);
+  --muted:rgba(251,251,250,.68);
+}
+
+/* Texto global mais legível */
+body{ color: var(--text); }
+p, .lead, .text-md, .text-sm{ color: var(--text); }
+.small, .text-muted, .letter-spacing.text-sm{ color: var(--muted) !important; }
+
+/* Navbar: contraste e estado ativo */
+#navbar{
+  background: rgba(9,10,11,.84) !important;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+#navbar .nav-link{ color: rgba(251,251,250,.85) !important; }
+#navbar .nav-item.active .nav-link,
+#navbar .nav-link:hover{ color: var(--lime) !important; }
+
+
+/* Cards: menos “preto fosso”, mais contraste */
+.card{
+  background: var(--card) !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  color: var(--text);
+}
+.card h3, .card h4, .card .card-title{ color: var(--white); }
+
+/* Botões coerentes */
+.btn-main, .btn-solid-border:hover{
+  background: var(--lime) !important;
+  color: var(--black) !important;
+  border: 0 !important;
+  box-shadow: 0 8px 22px rgba(170,202,28,.28);
+}
+.btn-solid-border{
+  border:1.5px solid var(--lime) !important;
+  color: var(--white) !important;
+  background: transparent !important;
+}
+
+/* Preços: texto claro e selo "Popular" visível */
+.section.pricing .card{ background:#121314 !important; }
+.section.pricing h3, .section.pricing .card-title{ color: var(--white); }
+.section.pricing .ti-check{ color: var(--lime) !important; }
+.section.pricing .ti-close{ color: rgba(251,251,250,.45) !important; }
+.section.pricing .text-sm.bg-dark,
+.section.pricing .text-sm.bg-primary{
+  background: var(--lime) !important; color: var(--black) !important;
+}
+
+/* Contacto: ícones e textos a respirar */
+.contact-info{
+  background:#131416 !important;
+  border:1px solid rgba(255,255,255,.07) !important;
+  box-shadow: 0 10px 24px rgba(0,0,0,.24);
+}
+.contact-info i{ color: var(--lime) !important; }
+.contact-info h5, .contact-info h4{ color: var(--white); }
+.contact-info p, .contact-info a{ color: var(--text) !important; }
+
+/* Footer: links com contraste decente */
+.footer{ background:#0A0B0D !important; }
+.footer h2, .footer h4{ color: var(--white); }
+.footer a{ color: rgba(251,251,250,.82) !important; }
+.footer a:hover{ color: var(--lime) !important; }
+
+/* Ajustes finos responsivos */
+@media (max-width: 575px){
+  .slider::after{ background: linear-gradient(180deg, rgba(9,10,11,.16), rgba(9,10,11,.36)); }
+}
+
+/* 2) Quando um card fica verde, mantém os cantos arredondados */
+.card{
+  border-radius: var(--radius) !important;
+  overflow: hidden;                     /* impede “quadrado” ao trocar de fundo */
+}
+.card.hover-style-1:hover{
+  border-radius: var(--radius) !important;
+}
+/* Se tiveres alguma variante que pinta o card a verde (ex: destaque) */
+.card.is-accent,
+.card.is-accent:hover{
+  background: var(--lime) !important;
+  color: var(--black) !important;
+  border-color: transparent !important;
+}
+
+/* 3) Caixas — mesmo alinhamento e altura */
+.mt-80px .row > [class*="col"]{
+  display: flex;               /* força cada coluna a ajustar */
+}
+.mt-80px .row > [class*="col"] > .card{
+  flex: 1 1 auto;              /* todas as cards mesma altura */
+  border-radius: 18px !important;
+}
+
+/* Corrige margem da primeira card (ficava “descida”) */
+.mt-80px .row > [class*="col"]:first-child > .card{
+  margin-top: 0 !important;
+}
+
+/* 4) Contraste dentro das caixas (títulos e texto) */
+.card h3, .card h4, .card .card-title{ color: var(--white) !important; }
+.card p, .card .text-muted{ color: rgba(251,251,250,.88) !important; }
+
+/* 5) Botões verdes: sem arestas e com consistência */
+.btn-main,
+.btn-solid-border:hover{
+  border-radius: 14px !important;
+}
+
+/* HERO: overlay atrás do texto + leve gradiente para contraste */
+.slider{ 
+  position: relative; 
+  z-index: 0;                 /* o conteúdo fica acima do overlay */
+}
+
+.slider::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;                 /* ESTA É A CHAVE: vai para trás do texto */
+  background: linear-gradient(180deg, rgba(9,10,11,.10), rgba(9,10,11,.30)) !important;
+}
+
+.slider::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;                 /* também atrás do conteúdo */
+  background: linear-gradient(180deg, rgba(9,10,11,.20), rgba(9,10,11,.38));
+  pointer-events:none;
+}
+
+/* garante que o texto e botões ficam sempre por cima, para todo o caso */
+.slider .container{ position: relative; z-index: 1; }
+.slider h1, .slider .btn{ text-shadow: 0 2px 5px rgba(0,0,0,.35); }
+
+/* ====== FIX: Blackout duplicado & contraste nos heros ====== */
+
+/* 1) Neutraliza o overlay preto do tema (usa ::before) */
+.page-title::before,
+.slider::before,
+.textimonial::before,
+.cta::before {
+  content: none !important;
+}
+
+/* 2) Aplica um overlay mais leve, mas só nosso (usa ::after) */
+.page-title,
+.slider,
+.textimonial,
+.cta {
+  position: relative;
+  isolation: isolate;             /* garante camadas previsíveis */
+}
+
+.page-title::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(9,10,11,.50);  /* ≈ 22% de escurecimento */
+  z-index: 0;
+}
+
+.slider::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* leve gradiente para legibilidade sem matar a foto */
+  background: linear-gradient(180deg, rgba(9,10,11,.12), rgba(9,10,11,.30));
+  z-index: 0;
+}
+
+/* 3) Garante que o conteúdo fica por cima do overlay */
+.page-title > *,
+.page-title .container, .page-title .row, .page-title [class*="col-"],
+.slider > *, .textimonial > *, .cta > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* 4) Títulos e breadcrumbs com contraste decente em todas as páginas */
+.page-title h1,
+.page-title .list-inline a,
+.page-title .list-inline span {
+  color: #FBFBFA !important;
+  text-shadow: 0 2px 12px rgba(0,0,0,.55);
+}
+
+.card {
+  border-radius: var(--radius) !important;
+  overflow: hidden !important;
+}
+
+.number {
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  color: rgb(255, 255, 255) !important;
+  font-size: 42px;
+  font-weight: 900;
+  z-index: 2; /* garante que fica acima do fundo verde */
+  mix-blend-mode: normal; /* remove o possível “apagamento” por blend */
+}
+
+/* ==================== PRICING CLEANUP ==================== */
+
+/* fundo e espaçamento da secção */
+.section.pricing {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* card de preços */
+.pricing-card {
+  background-color: #090A0B;        /* preto do teu tema */
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.7);
+  color: #FBFBFA;
+}
+
+/* título do plano */
+.pricing-card .card-title {
+  color: #FBFBFA;
+  font-size: 1.25rem;
+}
+
+
+/* lista de features */
+.pricing-card ul li {
+  font-size: 0.95rem;
+}
+
+/* badge "Popular" */
+.badge-popular {
+  display: inline-block;
+  background-color: #AACA1C;
+  color: #090A0B;
+  font-size: 0.7rem;
+  padding: .15rem .5rem;
+  border-radius: 999px;
+}
+
+/* botões */
+.btn-outline-pricing {
+  display: inline-block;
+  width: 100%;
+  border-radius: 999px;
+  border: 1px solid #AACA1C;
+  color: #FBFBFA;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  padding: 0.75rem 1rem;
+}
+
+.btn-outline-pricing:hover {
+  background-color: #AACA1C;
+  color: #090A0B;
+}
+
+/* garantir que nada antigo estraga os h3 aqui */
+.section.pricing h3 small {
+  /* no caso de ainda existir smalls antigos noutros sítios */
+  font-size: inherit;
+}
+

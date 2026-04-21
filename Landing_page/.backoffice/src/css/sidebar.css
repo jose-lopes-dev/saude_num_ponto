@@ -1,0 +1,198 @@
+/* ========================= FINAL OVERRIDE – LAYOUT ESTÁVEL ========================= */
+:root{
+  --topbar-h: 72px;            /* altura real da tua topbar */
+  --sidebar-w: 253px;          /* largura da sidebar */
+  --sidebar-gap: 16px;  
+  --sidebar-gap-bottom: 16px;        
+  --sidebar-header-h: 60px;    /* altura do header da sidebar (.navbar-brand-box) */
+}
+
+/* === TOPBAR FIXA */
+#page-topbar{
+  position: fixed !important;
+  top: 0; left: 0; right: 0;
+  height: var(--topbar-h) !important;
+  background: var(--vz-header-bg) !important; /* mantém o fundo do tema */
+  z-index: 1030 !important;
+}
+
+#page-topbar .navbar-header{
+  min-height: var(--topbar-h) !important;
+  align-items: center !important;
+  display: flex !important;
+}
+
+/* Alinhamento do perfil */
+#page-header-user-dropdown .header-profile-user{
+  width: 28px; height: 28px; /* dimensão natural do avatar */
+}
+#page-header-user-dropdown.btn{
+  height: var(--topbar-h) !important;
+  display: flex; align-items: center;
+  padding: 0 8px !important;
+}
+
+/* Impede que o tema aplique margens verticais extra */
+.navbar-header > *{ margin-top: 0 !important; margin-bottom: 0 !important; }
+
+/* Ajuste do conteúdo geral */
+.main-content{
+  padding-top: calc(var(--topbar-h) + var(--sidebar-gap)) !important;
+}
+
+/* ---------------- SIDEBAR: flutuante, responsiva, scroll só quando precisa ---------------- */
+@media (min-width: 992px){
+  .app-menu.navbar-menu{
+    position: fixed !important;
+    left: var(--sidebar-gap) !important;
+    top: calc(var(--topbar-h) + var(--sidebar-gap)) !important;
+    width: var(--sidebar-w) !important;
+    height: calc(100vh - var(--topbar-h) - var(--sidebar-gap) - var(--sidebar-gap-bottom)) !important;
+    border-radius: 18px !important;
+    box-shadow: 0 12px 28px rgba(0,0,0,.28) !important;
+    transform: none !important;              /* mata offcanvas/slide do tema no desktop */
+    overflow: hidden !important;             /* o wrapper não rola */
+    z-index: 1020 !important;
+  }
+  .app-menu .navbar-brand-box{ height: var(--sidebar-header-h) !important; }
+  .app-menu #scrollbar{
+    height: calc(100% - var(--sidebar-header-h)) !important;
+    overflow-y: auto !important; overflow-x: hidden !important;
+    padding: 6px 8px 8px !important;
+    scrollbar-width: none;
+  }
+  .app-menu #scrollbar:hover{ scrollbar-width: thin; }
+  .app-menu #scrollbar::-webkit-scrollbar{ width: 0; height: 0; }
+  .app-menu #scrollbar:hover::-webkit-scrollbar{ width: 8px; height: 8px; }
+  .app-menu #scrollbar::-webkit-scrollbar-thumb{ background: rgba(0,0,0,.35); border-radius: 8px; }
+
+  /* Conteúdo alinhado com topbar e sidebar; nada de espaço fantasma */
+  .main-content{
+    margin-left: calc(var(--sidebar-w) + (var(--sidebar-gap) * 2)) !important;
+    padding-top: calc(var(--topbar-h) + var(--sidebar-gap)) !important;
+  }
+}
+
+/* Item ativo com “pastilha” sem mexer nas tuas cores */
+.app-menu .menu-link{ border-radius: 12px; margin: 4px 6px; position: relative; }
+.app-menu .menu-link.active{
+  box-shadow: 0 0 0 1px rgba(255,255,255,.10) inset, 0 8px 18px rgba(0,0,0,.25) !important;
+}
+.app-menu .menu-link.active::before{
+  content:""; position:absolute; inset:0; border-radius:12px; background: rgba(255,255,255,.06); pointer-events:none;
+}
+
+/* Títulos das páginas encostados como deve ser */
+.page-content{ padding-top: 0 !important; }
+.page-title-box{ margin-top: 0 !important; padding-top: 0 !important; }
+
+/* Overlay móvel fora do desktop fixo */
+.vertical-overlay{ display: none !important; }
+
+/* ---------------- PATCH ANTI-HAMBÚRGUER: no desktop não parte o layout ---------------- */
+@media (min-width: 992px){
+  body.sidebar-enable .app-menu.navbar-menu,
+  body.vertical-sidebar-enable .app-menu.navbar-menu,
+  body.menu-open .app-menu.navbar-menu,
+  body[data-sidebar-size="sm"] .app-menu.navbar-menu,
+  body[data-sidebar-size="md"] .app-menu.navbar-menu{
+    left: var(--sidebar-gap) !important;
+    top: calc(var(--topbar-h) + var(--sidebar-gap)) !important;
+    width: var(--sidebar-w) !important;
+    height: calc(100vh - var(--topbar-h) - var(--sidebar-gap) - var(--sidebar-gap-bottom)) !important;
+    transform: none !important;
+  }
+  body.sidebar-enable .main-content,
+  body.vertical-sidebar-enable .main-content,
+  body.menu-open .main-content,
+  body[data-sidebar-size="sm"] .main-content,
+  body[data-sidebar-size="md"] .main-content{
+    margin-left: calc(var(--sidebar-w) + (var(--sidebar-gap) * 2)) !important;
+    padding-top: calc(var(--topbar-h) + var(--sidebar-gap)) !important;
+  }
+  body.sidebar-enable .vertical-overlay,
+  body.vertical-sidebar-enable .vertical-overlay,
+  body.menu-open .vertical-overlay{ display: none !important; }
+
+}
+
+/* Z-index sanidade */
+.app-menu.navbar-menu{ z-index: 1020 !important; }
+.main-content{ z-index: 1; }
+
+/* ===== Search bar: icon e texto alinhados, sem clips ===== */
+#page-topbar .app-search{            /* largura que pediste */
+  width: 320px !important;
+  max-width: 360px !important;
+}
+
+#page-topbar .app-search form{       /* envelope com altura real */
+  position: relative !important;
+  height: 38px !important;
+  margin: 0 !important;
+}
+
+#page-topbar .app-search input,
+#page-topbar .app-search .form-control,
+#page-topbar .app-search input[type="search"]{
+  height: 38px !important;           /* igual ao form */
+  line-height: 38px !important;      /* centra o placeholder verticalmente */
+  width: 100% !important;
+  background: #3a3a3a !important;    /* mantém o look */
+  border: 0 !important;
+  border-radius: 8px !important;
+  padding: 0 12px 0 36px !important; /* espaço para a lupa à esquerda */
+  color: #e0e0e0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+  display: block !important;
+}
+
+#page-topbar .app-search input::placeholder{
+  color: #cfcfcf !important;
+  opacity: 1 !important;
+}
+
+/* Ícone: absolutamente centrado no campo, nunca “por trás” */
+#page-topbar .app-search .search-icon,
+#page-topbar .app-search i,
+#page-topbar .app-search svg{
+  position: absolute !important;
+  left: 12px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  pointer-events: none !important;
+  color: #bfbfbf !important;
+  font-size: 16px !important;
+}
+
+/* efeito de foco de gente séria */
+#page-topbar .app-search form:focus-within input{
+  background: #444 !important;
+}
+
+/* ===== Forçar só as letras da sidebar, via CSS variables do tema ===== */
+.app-menu.navbar-menu {
+  /* texto normal dos itens da sidebar */
+  --vz-vertical-menu-item-color: #ffffff !important;
+
+  /* cores quando hover/ativo */
+  --vz-vertical-menu-item-hover-color: #000000 !important;
+  --vz-vertical-menu-item-active-color: #000000 !important;
+
+  /* subitens (se tiveres menus aninhados) */
+  --vz-vertical-menu-sub-item-color: #ffffff !important;
+  --vz-vertical-menu-sub-item-hover-color: #000000 !important;
+  --vz-vertical-menu-sub-item-active-color: #000000 !important;
+
+  /* títulos de secção na sidebar */
+  --vz-vertical-menu-title-color: #ffffff !important;
+}
+
+/* garantir que os ícones seguem a cor do texto */
+.app-menu .menu-link i,
+.app-menu .nav-link i,
+.app-menu .nav-sm .nav-link i {
+  color: currentColor !important;
+}
+

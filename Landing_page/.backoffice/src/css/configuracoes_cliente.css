@@ -1,0 +1,74 @@
+.config-card {
+    border-radius: 15px;
+    border: 1px solid #3a3a3a;
+    background: #1f1f1f;
+    transition: .3s ease;
+}
+
+.config-card:hover {
+    border-color: #4CAF50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.25);
+}
+
+
+.section-title {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    color: #e5e5e5;
+}
+
+
+.config-btn {
+    height: 45px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: .25s ease;
+}
+
+.config-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+.form-check-input {
+    cursor: pointer;
+    width: 50px !important;
+    height: 24px;
+}
+
+.form-check-label {
+    cursor: pointer;
+    font-size: 15px;
+}
+
+
+@media (max-width: 992px) {
+    .config-card {
+        margin-top: 20px;
+    }
+}
+
+
+.btn-password-custom {
+    border: 1px solid #3a3a3a;
+    background: #111;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    transition: 0.20s ease;
+}
+
+.btn-password-custom i {
+    font-size: 18px;
+}
+
+.btn-password-custom:hover {
+    border-color: #4ade80; 
+    background: #181818;
+    transform: translateY(-1px);
+}

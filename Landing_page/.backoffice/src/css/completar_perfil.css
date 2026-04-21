@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url("../../images/background_gym.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+.perfil-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  backdrop-filter: blur(6px);
+}
+
+.perfil-card {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 40px 35px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 255, 100, 0.3);
+  width: 380px;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.perfil-card h2 {
+  font-size: 1.8rem;
+  color: #52ff70;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.perfil-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  color: #a0ffa8;
+  margin-bottom: 6px;
+}
+
+.form-style {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(0, 255, 100, 0.2);
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-style:focus {
+  border-color: #00ff66;
+  box-shadow: 0 0 8px #00ff66;
+}
+
+.btn-guardar {
+  width: 100%;
+  background: #00ff66;
+  color: #000;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.25s ease-in-out;
+}
+
+.btn-guardar:hover {
+  background: #00cc55;
+  transform: scale(1.03);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

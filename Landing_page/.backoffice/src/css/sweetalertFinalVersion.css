@@ -1,0 +1,122 @@
+/* Backdrop com ligeiro blur para parecer 2025 e não 2009 */
+.swal2-container {
+  backdrop-filter: blur(2px);
+}
+
+/* Caixa principal */
+.swal2-popup {
+  background: #121313 !important;
+  color: #FBFBFA !important;
+  border: 1px solid #2a2a2a !important;
+  border-radius: 16px !important;
+  box-shadow: 0 12px 40px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.02) !important;
+  padding: 24px 24px 20px !important;
+}
+
+/* Título e texto */
+.swal2-title {
+  color: #FBFBFA !important;
+  font-weight: 700 !important;
+  letter-spacing: .2px;
+}
+.swal2-html-container {
+  color: #d6d7d8 !important;
+  font-size: .95rem;
+}
+
+/* Ícones: warning/info/success/error afinados à paleta */
+.swal2-icon {
+  box-shadow: none !important;
+}
+
+/* SUCCESS em lima */
+.swal2-icon.swal2-success {
+  border-color: rgba(170,202,28,.35) !important;
+  color: #AACA1C !important;
+}
+.swal2-icon.swal2-success .swal2-success-ring {
+  border: .25em solid rgba(170,202,28,.25) !important;
+}
+.swal2-icon.swal2-success [class^="swal2-success-line"] {
+  background-color: #AACA1C !important;
+}
+
+/* WARNING em lima para coerência visual */
+.swal2-icon.swal2-warning {
+  border-color: rgba(170,202,28,.35) !important;
+  color: #AACA1C !important;
+}
+
+/* INFO: azul discreto */
+.swal2-icon.swal2-info {
+  border-color: rgba(59,130,246,.35) !important;
+  color: #7fb0ff !important;
+}
+
+/* ERROR: vermelho limpo */
+.swal2-icon.swal2-error {
+  border-color: rgba(255,91,91,.35) !important;
+  color: #ff6b6b !important;
+}
+.swal2-icon.swal2-error .swal2-x-mark-line-left,
+.swal2-icon.swal2-error .swal2-x-mark-line-right {
+  background-color: #ff6b6b !important;
+}
+
+/* Botões */
+.swal2-actions {
+  gap: 10px !important;
+}
+.swal2-styled {
+  min-width: 140px;
+  height: 40px;
+  border-radius: 10px !important;
+  font-weight: 700 !important;
+  box-shadow: none !important;
+  border: 1px solid transparent !important;
+  transition: transform .06s ease, filter .12s ease, background .12s ease, border-color .12s ease;
+}
+
+/* Confirm = verde-lima do projeto */
+.swal2-styled.swal2-confirm {
+  background: #AACA1C !important;
+  color: #090A0B !important;
+  border-color: #AACA1C !important;
+}
+.swal2-styled.swal2-confirm:hover { filter: brightness(1.05); transform: translateY(-1px); }
+.swal2-styled.swal2-confirm:active { transform: translateY(0); }
+
+/* Cancel = cinza escuro elegante */
+.swal2-styled.swal2-cancel {
+  background: #1b1c1d !important;
+  color: #FBFBFA !important;
+  border-color: #343536 !important;
+}
+.swal2-styled.swal2-cancel:hover { background: #232425 !important; }
+
+/* Input/Select dentro do modal */
+.swal2-popup .swal2-input,
+.swal2-popup .swal2-select,
+.swal2-popup .swal2-textarea {
+  background: #0f1011 !important;
+  color: #FBFBFA !important;
+  border: 1px solid #2a2a2a !important;
+  border-radius: 10px !important;
+}
+.swal2-popup .swal2-input::placeholder,
+.swal2-popup .swal2-textarea::placeholder {
+  color: #8c8e90 !important;
+}
+
+/* Barra de progresso/loader (quando usares) */
+.swal2-timer-progress-bar {
+  background: linear-gradient(90deg, #AACA1C, #86a30f) !important;
+  height: 4px !important;
+  border-radius: 99px;
+}
+
+/* Bordas internas do footer (quando existe) */
+.swal2-footer {
+  border-top: 1px solid #2a2a2a !important;
+  color: #a9abaf !important;
+}

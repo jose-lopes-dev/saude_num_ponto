@@ -1,0 +1,90 @@
+/* Labels brancas dentro dos modais */
+.modal .form-label {
+  color: #ffffff !important;
+}
+
+/* Texto dos selects dentro dos modais */
+.modal .form-control,
+.modal .form-select {
+  color: #ffffff !important;
+  background-color: #2c2c2c !important; /* fundo mais escuro para contraste */
+}
+
+/* Placeholder dos inputs/selects brancos também */
+.modal .form-control::placeholder {
+  color: #cccccc !important;
+}
+
+/* Ícones/arrow do select */
+.modal select.form-control option {
+  color: #000000 !important; /* as opções no dropdown em si ficam pretas para leitura */
+  background-color: #ffffff !important;
+}
+
+canvas {
+  width: 100%;
+  height: 300px !important;
+}
+
+#chartLine, #chartPie {
+  max-height: 220px;
+  width: 100% !important;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.main-content {
+  min-height: 100vh; /* ocupa toda a altura da janela */
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1; /* o conteúdo principal expande */
+}
+
+#cardP {
+  max-height: 1px !important;   
+}
+
+.produto-card {
+    border-radius: 12px;
+    overflow: hidden;
+    border: none;
+    background-color: #1f1f1f; /* ficar no estilo dark do teu site */
+    color: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.produto-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+}
+
+.produto-img {
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-body {
+    padding: 18px;
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+
+
+
