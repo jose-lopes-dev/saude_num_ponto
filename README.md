@@ -1,49 +1,56 @@
-# Saúde num Ponto
+# 🩺 Saúde num Ponto
 
-Este projeto consiste em ajudar pessoas a melhorar a sua saúde e a sua qualidade de vida de forma online.
+Aplicação web desenvolvida com o objetivo de apoiar a gestão da saúde física e mental, permitindo a interação entre clientes e profissionais (Personal Trainer, Nutricionista e Psicólogo).
+
+O sistema foi concebido para centralizar serviços, melhorar a experiência do utilizador e facilitar a gestão operacional.
+
 ---
-
 ## 🔑 Credenciais de Acesso
-
 **Administrador**  
   
-- 👤 Utilizador: José Lopes
-- 📧 Email: `jsilvalopes84@gmail.com`  
-- 🔒 Password: `3F4B7F2E`
+- 👤 Utilizador: Admin
+- 📧 Email: `admin@gmail.com`  
+- 🔒 Password: `123`
 
 **Prestador de Serviço** 
 
 PT:
-- 👤 Utilizador: Filipe Pimentel
-- 📧 Email: `filipemtp2005@gmail.com`  
-- 🔒 Password: `F264B457`
-
-Nutricionista:
-- 👤 Utilizador: Eduardo Frechaut
-- 📧 Email: `eduardofrechaut07@gmail.com`  
-- 🔒 Password: `113DB599`
-
-Psicólogo:
-- 👤 Utilizador: Eduardo Silveira
-- 📧 Email: `eduardofrechaut42@gmail.com`  
-- 🔒 Password: `62ED1ED9`
-  
+- 👤 Utilizador: Filipe
+- 📧 Email: `filipept@gmail.com`  
+- 🔒 Password: `123`  
 ---
 
 **Cliente** 
-- 👤 Utilizador: José Silva
-- 📧 Email: `jmanuelsilva84@gmail.com`  
-- 🔒 Password: `silva`
+- 👤 Utilizador: Filipe
+- 📧 Email: `filipe@gmail.com`  
+- 🔒 Password: `123` 
 
+## 🚀 Funcionalidades Principais
 
-## 🧩 Funcionalidades Principais
+- Gestão de utilizadores (Admin, Cliente, Prestadores de Serviço)
+- Sistema de marcação de consultas
+- Dashboard com controlo financeiro e operacional
+- Gestão de serviços (treino, nutrição e apoio psicológico)
+- Sistema de chat interno entre utilizadores
+- Gestão de recursos humanos e clientes
+- Controlo de receitas, despesas e fornecedores
+- Calendário de marcações
+- Videoaulas e consultas de grupo
+- Pagamentos utilizado o stripe
 
-- Dashboard  
-- Gestão de Vendas, Consultas e Custos/Rendimentos  
-- Gestão de Recursos Humanos e Clientes  
-- Controlo Financeiro e de Fornecedores  
-- Gestão de Vencimentos e Ativos  
-- Calendário de marcações  
-- Sistema de Chat interno entre utilizadores  
-- Gestão de Utilizadores (criação, edição e remoção)
+---
 
+## 🛠️ Tecnologias Utilizadas
+
+- **Backend:** PHP  
+- **Frontend:** HTML, CSS, JavaScript  
+- **Base de Dados:** MySQL  
+- **Outros:** XAMPP / Ambiente local  
+
+---
+
+## ⚙️ Como Executar o Projeto
+
+### 1. Clonar o repositório
+```bash
+git clone https://github.com/jose-lopes-dev/saude_num_ponto.git
