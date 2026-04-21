@@ -1,3 +1,8 @@
+
+<img width="680" height="310" alt="image" src="https://github.com/user-attachments/assets/6e1e1eae-accc-41f5-a784-4c136c84fff9" />
+
+
+
 # 🩺 Saúde num Ponto
 
 Aplicação web desenvolvida com o objetivo de apoiar a gestão da saúde física e mental, permitindo a interação entre clientes e profissionais (Personal Trainer, Nutricionista e Psicólogo).
