@@ -42,6 +42,34 @@ PT:
 - Pagamentos utilizado o stripe
 
 ---
+
+## 📷 Demonstração do Sistema
+
+### 🔐 Login
+<img width="1918" height="909" alt="Login" src="https://github.com/user-attachments/assets/87fbf2e5-a300-46a4-abe9-88bbd94ccff1" />
+
+### 📊 Dashboard
+<img width="1916" height="910" alt="Dashboard_admin_1" src="https://github.com/user-attachments/assets/016e33ce-b11b-47ed-9c84-ed895d02d644" />
+<img width="1917" height="903" alt="Dashboard_admin_2" src="https://github.com/user-attachments/assets/94706e73-8477-471a-84a9-5f2d84a9d1e0" />
+
+### 👥 Gestão de Utilizadores
+<img width="1915" height="909" alt="users" src="https://github.com/user-attachments/assets/5daa977e-5fac-4965-ac32-48c6efc278c1" />
+
+
+### 📅 Sistema de Marcações
+<img width="1917" height="906" alt="appointment" src="https://github.com/user-attachments/assets/fa1ebb3a-22e7-411f-9548-29c5861a9ae2" />
+
+### 💬 Gestão de Aulas
+<img width="1914" height="899" alt="aulas" src="https://github.com/user-attachments/assets/b5f3b6df-d944-41cb-8b13-2f6fa5e2132f" />
+
+### Exercícios
+<img width="1910" height="907" alt="workout_1" src="https://github.com/user-attachments/assets/9fd8546e-42c3-4700-a371-d6214139424b" />
+<img width="1912" height="899" alt="workout_2" src="https://github.com/user-attachments/assets/3a03c6ad-3a05-4ee2-85ec-adf5f444e235" />
+
+### 💰 Gestão Financeira
+<img width="1911" height="903" alt="finance_1" src="https://github.com/user-attachments/assets/0031e5e4-bb18-47c3-bedb-0dc96519630f" />
+<img width="1904" height="907" alt="finance_2" src="https://github.com/user-attachments/assets/dc2d1ac8-cf54-4280-b79d-e75a4a48f81d" />
+
 ## 👥 Equipa
 
 Projeto desenvolvido em equipa no âmbito académico.
