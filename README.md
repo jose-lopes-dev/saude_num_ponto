@@ -1,34 +1,34 @@
 
 <img width="1914" height="910" alt="Homepage" src="https://github.com/user-attachments/assets/821c834c-b961-4f36-b2da-46d7b2003e98" />
 
-# 🩺 Saúde num Ponto
+# Saúde num Ponto
 
 Aplicação web desenvolvida com o objetivo de apoiar a gestão da saúde física e mental, permitindo a interação entre clientes e profissionais (Personal Trainer, Nutricionista e Psicólogo).
 
 O sistema foi concebido para centralizar serviços, melhorar a experiência do utilizador e facilitar a gestão operacional.
 
 ---
-## 🔑 Credenciais de Acesso
+## Credenciais de Acesso
 **Administrador**  
   
-- 👤 Utilizador: Admin
-- 📧 Email: `admin@gmail.com`  
-- 🔒 Password: `123`
+- Utilizador: Admin
+- Email: `admin@gmail.com`  
+- Password: `123`
 
 **Prestador de Serviço** 
 
 PT:
-- 👤 Utilizador: Filipe
-- 📧 Email: `filipept@gmail.com`  
-- 🔒 Password: `123`  
+- Utilizador: Filipe
+- Email: `filipept@gmail.com`  
+- Password: `123`  
 ---
 
 **Cliente** 
-- 👤 Utilizador: Filipe
-- 📧 Email: `filipe@gmail.com`  
-- 🔒 Password: `123` 
+- Utilizador: Filipe
+- Email: `filipe@gmail.com`  
+- Password: `123` 
 
-## 🚀 Funcionalidades Principais
+## Funcionalidades Principais
 
 - Gestão de utilizadores (Admin, Cliente, Prestadores de Serviço)
 - Sistema de marcação de consultas
@@ -43,34 +43,36 @@ PT:
 
 ---
 
-## 📷 Demonstração do Sistema
+## Demonstração do Sistema
 
-### 🔐 Login
+### Login
 <img width="1918" height="909" alt="Login" src="https://github.com/user-attachments/assets/87fbf2e5-a300-46a4-abe9-88bbd94ccff1" />
 
-### 📊 Dashboard
+### Dashboard
 <img width="1916" height="910" alt="Dashboard_admin_1" src="https://github.com/user-attachments/assets/016e33ce-b11b-47ed-9c84-ed895d02d644" />
-<img width="1917" height="903" alt="Dashboard_admin_2" src="https://github.com/user-attachments/assets/94706e73-8477-471a-84a9-5f2d84a9d1e0" />
 
-### 👥 Gestão de Utilizadores
+### Gestão de Utilizadores
 <img width="1915" height="909" alt="users" src="https://github.com/user-attachments/assets/5daa977e-5fac-4965-ac32-48c6efc278c1" />
 
 
-### 📅 Sistema de Marcações
+### Sistema de Marcações
 <img width="1917" height="906" alt="appointment" src="https://github.com/user-attachments/assets/fa1ebb3a-22e7-411f-9548-29c5861a9ae2" />
 
-### 💬 Gestão de Aulas
+### Gestão de Aulas
 <img width="1914" height="899" alt="aulas" src="https://github.com/user-attachments/assets/b5f3b6df-d944-41cb-8b13-2f6fa5e2132f" />
 
 ### Exercícios
 <img width="1910" height="907" alt="workout_1" src="https://github.com/user-attachments/assets/9fd8546e-42c3-4700-a371-d6214139424b" />
-<img width="1912" height="899" alt="workout_2" src="https://github.com/user-attachments/assets/3a03c6ad-3a05-4ee2-85ec-adf5f444e235" />
 
-### 💰 Gestão Financeira
+### Videoaulas de Grupo
+<img width="1917" height="911" alt="videoaulas" src="https://github.com/user-attachments/assets/07c0e5e9-95c6-4918-835a-953c812c303b" />
+
+<img width="1910" height="892" alt="videochamada" src="https://github.com/user-attachments/assets/3a83554d-ae57-4981-9598-05fd0b2cfaa8" />
+
+### Gestão Financeira
 <img width="1911" height="903" alt="finance_1" src="https://github.com/user-attachments/assets/0031e5e4-bb18-47c3-bedb-0dc96519630f" />
-<img width="1904" height="907" alt="finance_2" src="https://github.com/user-attachments/assets/dc2d1ac8-cf54-4280-b79d-e75a4a48f81d" />
 
-## 👥 Equipa
+## Equipa
 
 Projeto desenvolvido em equipa no âmbito académico.
 
@@ -81,7 +83,7 @@ Contribuição pessoal:
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **Backend:** PHP  
 - **Frontend:** HTML, CSS, JavaScript  
@@ -90,7 +92,7 @@ Contribuição pessoal:
 
 ---
 
-## ⚙️ Como Executar o Projeto
+## Como Executar o Projeto
 
 ### 1. Clonar o repositório
 ```bash
