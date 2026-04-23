@@ -89,8 +89,8 @@ Projeto académico desenvolvido em equipa.
 
 ## Autor
 José Lopes  
-LinkedIn: www.linkedin.com/in/josé-manuel-s-1aa30b196
-GitHub: https://github.com/jose-lopes-dev
+LinkedIn: [www.linkedin.com/in/josé-manuel-s-1aa30b196]
+GitHub: [https://github.com/jose-lopes-dev]
 
 
 
