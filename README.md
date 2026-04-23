@@ -3,43 +3,50 @@
 
 # Saúde num Ponto
 
-Aplicação web desenvolvida com o objetivo de apoiar a gestão da saúde física e mental, permitindo a interação entre clientes e profissionais (Personal Trainer, Nutricionista e Psicólogo).
+# Saúde num Ponto
 
-O sistema foi concebido para centralizar serviços, melhorar a experiência do utilizador e facilitar a gestão operacional.
+Aplicação web para gestão de serviços de saúde (treino, nutrição e apoio psicológico), permitindo a interação entre clientes e profissionais.
 
 ---
-## Credenciais de Acesso
-**Administrador**  
-  
-- Utilizador: Admin
-- Email: `admin@gmail.com`  
-- Password: `123`
 
-**Prestador de Serviço** 
-
-PT:
-- Utilizador: Filipe
-- Email: `filipept@gmail.com`  
-- Password: `123`  
----
-
-**Cliente** 
-- Utilizador: Filipe
-- Email: `filipe@gmail.com`  
-- Password: `123` 
-
-## Funcionalidades Principais
-
-- Gestão de utilizadores (Admin, Cliente, Prestadores de Serviço)
-- Sistema de marcação de consultas
-- Dashboard com controlo financeiro e operacional
-- Gestão de serviços (treino, nutrição e apoio psicológico)
-- Sistema de chat interno entre utilizadores
-- Gestão de recursos humanos e clientes
-- Controlo de receitas, despesas e fornecedores
+## Funcionalidades
+- Gestão de utilizadores (Admin, Cliente, Prestadores)
+- Marcação de consultas
+- Dashboard com indicadores operacionais
+- Gestão financeira (receitas e despesas)
+- Chat interno entre utilizadores
 - Calendário de marcações
-- Videoaulas e consultas de grupo
-- Sistema de Pagamentos
+- Videoaulas
+- Marketplace
+
+---
+
+## Tecnologias
+- PHP (versão 8.3.26)
+- JavaScript (ES6)
+- HTML5 / CSS3
+- MySQL
+- XAMPP (ambiente local)
+
+---
+
+## Como executar
+
+1. Clonar ou descarregar o projeto  
+2. Colocar na pasta `htdocs` (XAMPP)  
+3. Importar a base de dados (ficheiro `.sql` na pasta `/database`)  
+4. Configurar ligação à base de dados (ficheiro `config.php`)  
+5. Iniciar Apache e MySQL  
+6. Aceder via: http://localhost/nome-do-projeto
+
+---
+
+## Contributo Pessoal
+
+- Desenvolvimento de funcionalidades backend e frontend  
+- Estruturação da base de dados  
+- Implementação de lógica de negócio  
+- Apoio na organização do sistema  
 
 ---
 
@@ -53,7 +60,6 @@ PT:
 
 ### Gestão de Utilizadores
 <img width="1915" height="909" alt="users" src="https://github.com/user-attachments/assets/5daa977e-5fac-4965-ac32-48c6efc278c1" />
-
 
 ### Sistema de Marcações
 <img width="1917" height="906" alt="appointment" src="https://github.com/user-attachments/assets/fa1ebb3a-22e7-411f-9548-29c5861a9ae2" />
@@ -73,58 +79,20 @@ PT:
 ### Gestão Financeira
 <img width="1911" height="903" alt="finance_1" src="https://github.com/user-attachments/assets/0031e5e4-bb18-47c3-bedb-0dc96519630f" />
 
-### Gestão Financeira
+### Marketplace
 <img width="1916" height="903" alt="marketplace" src="https://github.com/user-attachments/assets/a1d9b500-cf6a-4057-a515-357cb99df925" />
 
+---
 
-## Equipa
-
-Projeto desenvolvido em equipa no âmbito académico.
-
-Contribuição pessoal:
-- Levatamento dos requisitos
-- criação dos documentos project charter e Gantt
-- Construção da base de dados do sistema
-- Criação e implementação total do sistema das videoaulas com integração da API do JITSI
-- Construção da funcionalidade com os diversos tipos de exercicio fisico e mental
-- Construção do sistema Marketplace (backend e frontend) sistema de integração com a API do Stripe feito por outro colega
-- Criação da página de Recursos humanos, destacando a gestão de documentos e envio dos dados de acesso do sistema para o email do respetivo utilizador.
-- Criação da pagina clientes com analise estatística dos dados sobre os clientes
-- Criação da pagina de Gestão financeira da empresa
-- Criação da funcionalidade de pagamento e analise estatística dos vencimentos
+## Estado do Projeto
+Projeto académico desenvolvido em equipa.
 
 ---
 
-## Tecnologias Utilizadas
+## Autor
+José Lopes  
+LinkedIn: [www.linkedin.com/in/josé-manuel-s-1aa30b196]  
+GitHub: [https://github.com/jose-lopes-dev]
 
-- **Backend:** PHP  
-- **Frontend:** HTML, CSS, JavaScript  
-- **Base de Dados:** MySQL  
-- **Outros:** XAMPP / Ambiente local  
-
----
-
-## Pré Requisitos
-- Node.js
-- Jitsi
-- Stripe
-
-## Como Executar o Projeto
-
-### 1. Clonar o repositório
-```bash
-git clone https://github.com/jose-lopes-dev/saude_num_ponto.git
-
-### 2. Configurar o ambiente
-Instalar o XAMPP (ou outro servidor local)
-Colocar o projeto na pasta htdocs
-
-### 3. Base de dados
-Importar o ficheiro .sql disponível na pasta /database
-
-### 4. Executar
-Iniciar Apache e MySQL no XAMPP
-Aceder ao projeto no browser:
-http://localhost/nome-do-projeto
 
 
