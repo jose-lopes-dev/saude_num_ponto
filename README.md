@@ -73,6 +73,10 @@ PT:
 ### Gestão Financeira
 <img width="1911" height="903" alt="finance_1" src="https://github.com/user-attachments/assets/0031e5e4-bb18-47c3-bedb-0dc96519630f" />
 
+### Gestão Financeira
+<img width="1916" height="903" alt="marketplace" src="https://github.com/user-attachments/assets/a1d9b500-cf6a-4057-a515-357cb99df925" />
+
+
 ## Equipa
 
 Projeto desenvolvido em equipa no âmbito académico.
@@ -101,8 +105,9 @@ Contribuição pessoal:
 ---
 
 ## Pré Requisitos
--Node.js
-
+- Node.js
+- Jitsi
+- Stripe
 
 ## Como Executar o Projeto
 
