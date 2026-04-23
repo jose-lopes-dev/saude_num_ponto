@@ -3,8 +3,6 @@
 
 # Saúde num Ponto
 
-# Saúde num Ponto
-
 Aplicação web para gestão de serviços de saúde (treino, nutrição e apoio psicológico), permitindo a interação entre clientes e profissionais.
 
 ---
@@ -91,8 +89,8 @@ Projeto académico desenvolvido em equipa.
 
 ## Autor
 José Lopes  
-LinkedIn: [www.linkedin.com/in/josé-manuel-s-1aa30b196]  
-GitHub: [https://github.com/jose-lopes-dev]
+LinkedIn: www.linkedin.com/in/josé-manuel-s-1aa30b196
+GitHub: https://github.com/jose-lopes-dev
 
 
 
