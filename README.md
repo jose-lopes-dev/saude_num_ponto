@@ -39,7 +39,7 @@ PT:
 - Controlo de receitas, despesas e fornecedores
 - Calendário de marcações
 - Videoaulas e consultas de grupo
-- Pagamentos utilizado o stripe
+- Sistema de Pagamentos
 
 ---
 
@@ -67,6 +67,7 @@ PT:
 ### Videoaulas de Grupo
 <img width="1917" height="911" alt="videoaulas" src="https://github.com/user-attachments/assets/07c0e5e9-95c6-4918-835a-953c812c303b" />
 
+### Videochamadas
 <img width="1910" height="892" alt="videochamada" src="https://github.com/user-attachments/assets/3a83554d-ae57-4981-9598-05fd0b2cfaa8" />
 
 ### Gestão Financeira
@@ -77,9 +78,16 @@ PT:
 Projeto desenvolvido em equipa no âmbito académico.
 
 Contribuição pessoal:
-- Desenvolvimento de funcionalidades X
-- Organização de sistema Y
-- Implementação de Z
+- Levatamento dos requisitos
+- criação dos documentos project charter e Gantt
+- Construção da base de dados do sistema
+- Criação e implementação total do sistema das videoaulas com integração da API do JITSI
+- Construção da funcionalidade com os diversos tipos de exercicio fisico e mental
+- Construção do sistema Marketplace (backend e frontend) sistema de integração com a API do Stripe feito por outro colega
+- Criação da página de Recursos humanos, destacando a gestão de documentos e envio dos dados de acesso do sistema para o email do respetivo utilizador.
+- Criação da pagina clientes com analise estatística dos dados sobre os clientes
+- Criação da pagina de Gestão financeira da empresa
+- Criação da funcionalidade de pagamento e analise estatística dos vencimentos
 
 ---
 
@@ -91,6 +99,10 @@ Contribuição pessoal:
 - **Outros:** XAMPP / Ambiente local  
 
 ---
+
+## Pré Requisitos
+-Node.js
+
 
 ## Como Executar o Projeto
 
